@@ -9,9 +9,9 @@
 - [x]  First Challenge - 17:46
 - [x]  CSS - 20:55
 - [x]  TailwindCSS (optional) - 23:23 
-- [ ]  DaisyUI (optional) - 32:55
-- [ ]  Layout File - 42:46
-- [ ]  Navbar Challenge - 46:49
+- [x]  DaisyUI (optional) - 32:55
+- [x]  Layout File - 42:46
+- [x]  Navbar Challenge - 46:49
 - [ ]  Server Components vs Client Components - 56:26
 - [ ]  Data Fetching in Server Components - 1:06:12
 - [ ]  Loading and Error Components - 1:10:42
