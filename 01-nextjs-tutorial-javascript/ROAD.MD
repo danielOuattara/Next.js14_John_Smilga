@@ -7,8 +7,8 @@
 - [x]  Create Pages and Link Component  - 12:00
 - [x]  Nested Pages- 15:53
 - [x]  First Challenge - 17:46
-- [ ]  CSS - 20:55
-- [ ]  TailwindCSS (optional) - 23:23 
+- [x]  CSS - 20:55
+- [x]  TailwindCSS (optional) - 23:23 
 - [ ]  DaisyUI (optional) - 32:55
 - [ ]  Layout File - 42:46
 - [ ]  Navbar Challenge - 46:49
