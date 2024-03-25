@@ -12,7 +12,7 @@
 - [x]  DaisyUI (optional) - 32:55
 - [x]  Layout File - 42:46
 - [x]  Navbar Challenge - 46:49
-- [ ]  Server Components vs Client Components - 56:26
+- [x]  Server Components vs Client Components - 56:26
 - [ ]  Data Fetching in Server Components - 1:06:12
 - [ ]  Loading and Error Components - 1:10:42
 - [ ]  Nested Layouts - 1:19:46
