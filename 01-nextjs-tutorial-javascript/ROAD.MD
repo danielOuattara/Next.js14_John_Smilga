@@ -1,0 +1,31 @@
+
+# Planning
+
+- [x]  Intro - 00:00
+- [x]  New App - 3:42
+- [x]  Home Page - 7:26
+- [x]  Create Pages and Link Component  - 12:00
+- [x]  Nested Pages- 15:53
+- [x]  First Challenge - 17:46
+- [ ]  CSS - 20:55
+- [ ]  TailwindCSS (optional) - 23:23 
+- [ ]  DaisyUI (optional) - 32:55
+- [ ]  Layout File - 42:46
+- [ ]  Navbar Challenge - 46:49
+- [ ]  Server Components vs Client Components - 56:26
+- [ ]  Data Fetching in Server Components - 1:06:12
+- [ ]  Loading and Error Components - 1:10:42
+- [ ]  Nested Layouts - 1:19:46
+- [ ]  Dynamic Routes - 1:22:50
+- [ ]  Single Drink Page- 1:31:14
+- [ ]  Image Component - 1:37:28
+- [ ]  More Routing - 1:53:12
+- [ ]  Prisma - 1:59:32
+- [ ]  Display Tasks - 2:19:15
+- [ ]  Server Actions - 2:30:10
+- [ ]  Validation - 3:04:02
+- [ ]  Providers - 3:18 :20
+- [ ]  Route Handlers - 3:27:20
+- [ ]  Middleware - 3:40:25
+- [ ]  Hosting DB - 3:45:50
+- [ ]  Deploy - 3:53:53
