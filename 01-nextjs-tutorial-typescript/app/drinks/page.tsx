@@ -57,10 +57,6 @@ export default async function DrinkPage() {
 
 const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a";
 
-interface IFetchData {
-  drinks: IDrink[];
-}
-
 const fetchDrinks = async (): Promise<IFetchData> => {
   /** --- just for demo purposes --- */
   await new Promise((resolve) => setTimeout(resolve, 1000));

@@ -51,3 +51,7 @@ interface IDrink {
   strCreativeCommonsConfirmed: string;
   dateModified: string;
 }
+
+interface IFetchData {
+  drinks: IDrink[];
+}
