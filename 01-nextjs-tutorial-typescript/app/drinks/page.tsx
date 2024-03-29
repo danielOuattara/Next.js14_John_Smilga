@@ -37,12 +37,31 @@
 
 //-----------------------------------------------------------------------
 
+import { DrinksList } from "@/components";
+
+export default async function DrinkPage() {
+  const data: IFetchData = await fetchDrinks();
+  console.log(data);
+  return (
+    <div>
+      <h1 className="text-7xl">DrinksPage</h1>
+      <DrinksList drinks={data.drinks} />
+    </div>
+  );
+}
+
+//--------------
+
 // ERROR
 // const url = "https://www.thecocktaildb.com/api/json/v1/1/search.phpAAA?f=a";
 
 const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a";
 
-const fetchDrinks = async () => {
+interface IFetchData {
+  drinks: IDrink[];
+}
+
+const fetchDrinks = async (): Promise<IFetchData> => {
   /** --- just for demo purposes --- */
   await new Promise((resolve) => setTimeout(resolve, 1000));
   const response = await fetch(url);
@@ -52,13 +71,3 @@ const fetchDrinks = async () => {
   const data = await response.json();
   return data;
 };
-
-export default async function DrinkPage() {
-  const data = await fetchDrinks();
-  console.log(data);
-  return (
-    <div>
-      <h1 className="text-7xl">DrinksPage</h1>
-    </div>
-  );
-}
