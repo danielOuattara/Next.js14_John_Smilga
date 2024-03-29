@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Next.js Tutorial ",
+  title: "Next.js Javascript",
   description:
     "I this section tutorial John Smilga develops his Tutorial on Next.js",
 };

@@ -20,7 +20,7 @@ export default function Navbar() {
           {links.map((link) => {
             return (
               <li key={link.href}>
-                <Link href={link.href} className=" capitalize">
+                <Link href={link.href} className="capitalize">
                   {link.label}
                 </Link>
               </li>

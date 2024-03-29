@@ -35,7 +35,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-
 # -------------------------------------------------------------------------------------------
 
 # Final App
@@ -61,7 +60,7 @@ npx create-next-app@latest appName
 - .gitignore - sets which will be ignored by source control
 - bunch of config files (will discuss as we go)
 - in package.json look scripts
-- 'npm run dev' to spin up the project on http://localhost:3000
+- 'npm run dev' to spin up the project on <http://localhost:3000>
 
 ```sh
 npm run dev
@@ -304,19 +303,26 @@ Benefits :
 - bundle size
 
 Data Fetching: Server Components allow you to move data fetching to the server, closer to your data source. This can improve performance by reducing time it takes to fetch data needed for rendering, and the amount of requests the client needs to make.
+
 Security: Server Components allow you to keep sensitive data and logic on the server, such as tokens and API keys, without the risk of exposing them to the client.
+
 Caching: By rendering on the server, the result can be cached and reused on subsequent requests and across users. This can improve performance and reduce cost by reducing the amount of rendering and data fetching done on each request.
-Bundle Sizes: Server Components allow you to keep large dependencies that previously would impact the client JavaScript bundle size on the server. This is beneficial for users with slower internet or less powerful devices, as the client does not have to download, parse and execute any JavaScript for Server Components.
+
+Bundle Sizes: Server Components allow you to keep on the server the large dependencies that previously would impact the client JavaScript bundle size. This is beneficial for users with slower internet or less powerful devices, as the client does not have to download, parse and execute any JavaScript for Server Components.
+
 Initial Page Load and First Contentful Paint (FCP): On the server, we can generate HTML to allow users to view the page immediately, without waiting for the client to download, parse and execute the JavaScript needed to render the page.
+
 Search Engine Optimization and Social Network Shareability: The rendered HTML can be used by search engine bots to index your pages and social network bots to generate social card previews for your pages.
+
 Streaming: Server Components allow you to split the rendering work into chunks and stream them to the client as they become ready. This allows the user to see parts of the page earlier without having to wait for the entire page to be rendered on the server.
 
 ### Client Components
 
 Benefits :
 
-- Interactivity: Client Components can use state, effects, and event listeners, meaning they can provide immediate feedback to the user and update the UI.
-- Browser APIs: Client Components have access to browser APIs, like geolocation or localStorage, allowing you to build UI for specific use cases.
+Interactivity: Client Components can use state, effects, and event listeners, meaning they can provide immediate feedback to the user and update the UI.
+  
+Browser APIs: Client Components have access to browser APIs, like geolocation or localStorage, allowing you to build UI for specific use cases.
 
 ## Challenge - Setup Counter
 
@@ -837,7 +843,7 @@ DATABASE_URL = 'file:./dev.db';
 
 In development, the command next dev clears Node.js cache on run. This in turn initializes a new PrismaClient instance each time due to hot reloading that creates a connection to the database. This can quickly exhaust the database connections as each PrismaClient instance holds its own connection pool.
 
-(Prisma Instance)[https://www.prisma.io/docs/guides/other/troubleshooting-orm/help-articles/nextjs-prisma-client-dev-practices#solution]
+[Prisma Instance](https://www.prisma.io/docs/guides/other/troubleshooting-orm/help-articles/nextjs-prisma-client-dev-practices#solution)
 
 - create utils/db.ts
 
@@ -880,7 +886,7 @@ npx prisma migrate dev
 
 - in a new terminal window
 - launch Prisma Studio, which is a visual editor for your database.
-- http://localhost:5555
+- <http://localhost:5555>
 
 ```sh
 npx prisma studio
