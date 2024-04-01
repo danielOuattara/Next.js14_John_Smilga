@@ -22,7 +22,15 @@ export default async function SingleDrinkPage({
         back to drinks
       </Link>
       {/* <img src={drinkImage.src} alt="beverage" /> */}
-      <Image src={drinkImage} alt="beverage" className="w-48 h-64 rounded-lg" />
+      {/* <Image src={drinkImage} alt="beverage" className="w-48 h-64 rounded-lg" /> */}
+      <Image
+        src={imgSrc}
+        width={300}
+        height={300}
+        className="w-48 h-48 rounded shadow-lg mb-4"
+        priority
+        alt={title}
+      />
       <h1 className="text-4xl mb-8">{title}</h1>
     </div>
   );
