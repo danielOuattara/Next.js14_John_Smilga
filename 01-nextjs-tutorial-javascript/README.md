@@ -1102,7 +1102,6 @@ export default TaskList;
 - asynchronous server functions that can be called directly from your components.
 
 - typical setup for server state mutations (create, update, delete)
-
   - endpoint on the server (api route on Next.js)
   - make request from the front-end
     - setup form, handle submission etc
