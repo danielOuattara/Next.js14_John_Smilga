@@ -639,7 +639,7 @@ export default SingleDrink;
 - get random image from pexels site
   [Random Drink](https://www.pexels.com/photo/red-glass-with-garnished-beverage-2842876/)
 
-The Next.js Image component extends the HTML <img> element with features for automatic image optimization:
+The Next.js ```Image``` component extends the HTML ```img``` element with features for automatic image optimization:
 
 - Size Optimization: Automatically serve correctly sized images for each device, using modern image formats like WebP and AVIF.
 - Visual Stability: Prevent layout shift automatically when images are loading.

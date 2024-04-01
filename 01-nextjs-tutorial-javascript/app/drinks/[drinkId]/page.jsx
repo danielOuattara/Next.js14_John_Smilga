@@ -1,4 +1,8 @@
 import Link from "next/link";
+import drinkImage from "./pexels-beverage.jpg";
+import Image from "next/image";
+
+// console.log(drinkImage);
 
 export default async function SingleDrinkPage({ params }) {
   const data = await getSingleDrink(params.drinkId);
@@ -9,6 +13,8 @@ export default async function SingleDrinkPage({ params }) {
       <Link href="/drinks" className="btn btn-primary mt-8 mb-12">
         back to drinks
       </Link>
+      {/* <img src={drinkImage.src} alt="beverage" /> */}
+      <Image src={drinkImage} alt="beverage" className="w-48 h-64 rounded-lg" />
       <h1 className="text-4xl mb-8">{title}</h1>
     </div>
   );
