@@ -40,7 +40,6 @@ import { DrinksList } from "@/components";
 
 export default async function DrinkPage() {
   const data = await fetchDrinks();
-  // console.log(data);
   return (
     <div>
       <h1 className="text-7xl">DrinksPage</h1>
