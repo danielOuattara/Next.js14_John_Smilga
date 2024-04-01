@@ -2,7 +2,6 @@ import prisma from "@/utilities/db";
 
 export default async function PrismaExamplePage() {
   const tasks = await prismaHandlers();
-  console.log("tasks = ", tasks);
   return (
     <div>
       <h1 className="text-3xl font-medium mb-4">Prisma Example Page</h1>
