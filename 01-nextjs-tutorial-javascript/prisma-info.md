@@ -53,3 +53,76 @@ model Task {
 8. safely applies and tracks changes to the database structure: `npx prisma migrate dev`
 
 9. in a new terminal window launch Prisma Studio, which is a visual editor for your database: `npx prisma studio`. Listen on: <http://localhost:5555>
+
+10. Prisma Crud:  <https://www.prisma.io/docs/concepts/components/prisma-client/crud>
+
+- Create Single Record
+
+    ```js
+    const task = await prisma.task.create({
+      data: {
+        content: 'some task',
+      },
+    });
+    ```
+
+- Get All Records
+
+    ```js
+    const tasks = await prisma.task.findMany();
+    ```
+
+- Get record by ID or unique identifier
+
+    ```js
+    // By unique identifier
+    const user = await prisma.user.findUnique({
+      where: {
+        email: 'elsa@prisma.io',
+      },
+    });
+
+    // By ID
+    const task = await prisma.task.findUnique({
+      where: { id },
+    });
+    ```
+
+- Update Record
+
+    ```js
+    const updateTask = await prisma.task.update({
+      where: {
+        id: id,
+      },
+      data: {
+        content: 'updated task',
+      },
+    });
+    ```
+
+- Update or create records
+
+    ```js
+    const upsertTask = await prisma.task.upsert({
+      where: {
+        id: id,
+      },
+      update: {
+        content: 'some value',
+      },
+      create: {
+        content: 'some value',
+      },
+    });
+    ```
+
+- Delete a single record
+
+    ```js
+    const deleteTask = await prisma.task.delete({
+      where: {
+        id: id,
+      },
+    });
+    ```  

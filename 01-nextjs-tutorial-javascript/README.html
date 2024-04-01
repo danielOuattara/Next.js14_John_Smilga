@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Getting Started</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.8;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <p>This is a <a href="https://nextjs.org/">Next.js</a> project bootstrapped with <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a>.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>First, run the development server:</p>
+<pre><code class="language-bash">npm run dev
+<span class="hljs-comment"># or</span>
+yarn dev
+<span class="hljs-comment"># or</span>
+pnpm dev
+<span class="hljs-comment"># or</span>
+bun dev
+</code></pre>
+<p>Open <a href="http://localhost:3000">http://localhost:3000</a> with your browser to see the result.</p>
+<p>You can start editing the page by modifying <code>app/page.js</code>. The page auto-updates as you edit the file.</p>
+<p>This project uses <a href="https://nextjs.org/docs/basic-features/font-optimization"><code>next/font</code></a> to automatically optimize and load Inter, a custom Google Font.</p>
+<h2 id="learn-more">Learn More</h2>
+<p>To learn more about Next.js, take a look at the following resources:</p>
+<ul>
+<li><a href="https://nextjs.org/docs">Next.js Documentation</a> - learn about Next.js features and API.</li>
+<li><a href="https://nextjs.org/learn">Learn Next.js</a> - an interactive Next.js tutorial.</li>
+</ul>
+<p>You can check out <a href="https://github.com/vercel/next.js/">the Next.js GitHub repository</a> - your feedback and contributions are welcome!</p>
+<h2 id="deploy-on-vercel">Deploy on Vercel</h2>
+<p>The easiest way to deploy your Next.js app is to use the <a href="https://vercel.com/new?utm_medium=default-template&amp;filter=next.js&amp;utm_source=create-next-app&amp;utm_campaign=create-next-app-readme">Vercel Platform</a> from the creators of Next.js.</p>
+<p>Check out our <a href="https://nextjs.org/docs/deployment">Next.js deployment documentation</a> for more details.</p>
+<h1 id="-------------------------------------------------------------------------------------------">-------------------------------------------------------------------------------------------</h1>
+<h1 id="final-app">Final App</h1>
+<p><a href="https://nextjs-tutorial-production.vercel.app/">Tutorial</a></p>
+<h2 id="node-version">Node Version</h2>
+<p>The minimum Node.js version has been bumped from 16.14 to 18.17, since 16.x has reached end-of-life.</p>
+<h2 id="create-next-app">Create Next App</h2>
+<pre><code class="language-sh">npx create-next-app@latest appName
+</code></pre>
+<h2 id="folder-structure">Folder Structure</h2>
+<ul>
+<li>app folder - where we will spend most of our time
+<ul>
+<li>setup routes, layouts, loading states, etc</li>
+</ul>
+</li>
+<li>node_modules - project dependencies</li>
+<li>public - static assets</li>
+<li>.gitignore - sets which will be ignored by source control</li>
+<li>bunch of config files (will discuss as we go)</li>
+<li>in package.json look scripts</li>
+<li>'npm run dev' to spin up the project on <a href="http://localhost:3000">http://localhost:3000</a></li>
+</ul>
+<pre><code class="language-sh">npm run dev
+</code></pre>
+<h2 id="home-page">Home Page</h2>
+<ul>
+<li>
+<p>page.js in the root of app folder</p>
+</li>
+<li>
+<p>represents root of our application
+'/' local domain or production domain</p>
+</li>
+<li>
+<p>react component (server component)</p>
+</li>
+<li>
+<p>bunch of css classes (will discuss Tailwind in few lectures)</p>
+</li>
+<li>
+<p>export component as default</p>
+</li>
+<li>
+<p>file name &quot;page&quot; has a special meaning</p>
+</li>
+<li>
+<p>snippets extension</p>
+<p>app/page.js</p>
+</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">HomePage</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-7xl&#x27;</span>&gt;</span>HomePage<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">HomePage</span>;
+</code></pre>
+<h2 id="create-pages-in-nextjs">Create Pages in Next.js</h2>
+<ul>
+<li>in the app folder create a folder with the page.js file
+<ul>
+<li>about/page.js</li>
+<li>contact/page.js</li>
+</ul>
+</li>
+<li>can have .js .jsx .tsx extension</li>
+</ul>
+<p>app/about/page.js</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">AboutPage</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-7xl&#x27;</span>&gt;</span>AboutPage<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">AboutPage</span>;
+</code></pre>
+<h2 id="link-component">Link Component</h2>
+<ul>
+<li>navigate around the project</li>
+<li>import Link from 'next/link'
+home page</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Link</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/link&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">HomePage</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-7xl&#x27;</span>&gt;</span>HomePage<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&#x27;/about&#x27;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-2xl&#x27;</span>&gt;</span>
+        about page
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">HomePage</span>;
+</code></pre>
+<h2 id="nested-routes">Nested Routes</h2>
+<ul>
+<li>app/about/info/page.js</li>
+<li>if no page.js in a segment will result in 404</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">AboutInfoPage</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-7xl&#x27;</span>&gt;</span>AboutInfoPage<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>;
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">AboutInfoPage</span>;
+</code></pre>
+<h2 id="challenge">Challenge</h2>
+<ul>
+<li>create following pages :
+<ul>
+<li>client, drinks, prisma-example, query and tasks</li>
+</ul>
+</li>
+</ul>
+<h2 id="tailwind-and-daisyui">Tailwind and DaisyUI</h2>
+<ul>
+<li>
+<p>both videos optional</p>
+</li>
+<li>
+<p>remove extra code in globals.css</p>
+</li>
+<li>
+<p>install daisyui</p>
+</li>
+<li>
+<p>install tailwindcss typography plugin</p>
+</li>
+<li>
+<p>configure tailwind</p>
+</li>
+</ul>
+<pre><code class="language-sh">npm i -D daisyui@latest
+npm i @tailwindcss/typography
+</code></pre>
+<p>tailwind.config.js</p>
+<pre><code class="language-js"><span class="hljs-comment">/** <span class="hljs-doctag">@type</span> {<span class="hljs-type">import(&#x27;tailwindcss&#x27;).Config</span>} */</span>
+<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = {
+  ...
+  <span class="hljs-attr">plugins</span>: [<span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@tailwindcss/typography&#x27;</span>), <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;daisyui&#x27;</span>)]
+};
+
+</code></pre>
+<h2 id="layouts-and-templates">Layouts and Templates</h2>
+<ul>
+<li>
+<p>layout.js</p>
+</li>
+<li>
+<p>template.js</p>
+<p>Layout is a component which wraps other pages and layouts. Allow to share UI. Even when the route changes, layout DOES NOT re-render. Can fetch data but can't pass it down to children. Templates are the same but they re-render.</p>
+</li>
+<li>
+<p>the top-most layout is called the Root Layout. This required layout is shared across all pages in an application. Root layouts must contain html and body tags.</p>
+</li>
+<li>
+<p>any route segment can optionally define its own Layout. These layouts will be shared across all pages in that segment.</p>
+</li>
+<li>
+<p>layouts in a route are nested by default. Each parent layout wraps child layouts below it using the React children prop.</p>
+</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Inter</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/font/google&#x27;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;./globals.css&#x27;</span>;
+
+<span class="hljs-keyword">const</span> inter = <span class="hljs-title class_">Inter</span>({ <span class="hljs-attr">subsets</span>: [<span class="hljs-string">&#x27;latin&#x27;</span>] });
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> metadata = {
+  <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;Next.js Tutorial&#x27;</span>,
+  <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;Build awesome stuff with Next.js!&#x27;</span>,
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">RootLayout</span>(<span class="hljs-params">{ children }</span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&#x27;en&#x27;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{inter.className}</span>&gt;</span>{children}<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<h2 id="challenge---navbar">Challenge - Navbar</h2>
+<ul>
+<li>in the root create components folder</li>
+<li>create Navbar.jsx component</li>
+<li>import Link component</li>
+<li>setup a list of links (to existing pages)</li>
+<li>iterate over the list</li>
+<li>render Navbar in the app/layout.js</li>
+<li>setup the same layout for all pages (hint: wrap children prop)</li>
+</ul>
+<h2 id="setup-navbar">Setup Navbar</h2>
+<p>components/Navbar</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Link</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/link&#x27;</span>;
+
+<span class="hljs-keyword">const</span> links = [
+  { <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;/client&#x27;</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;client&#x27;</span> },
+  { <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;/drinks&#x27;</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;drinks&#x27;</span> },
+  { <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;/tasks&#x27;</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;tasks&#x27;</span> },
+  { <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;/query&#x27;</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;react-query&#x27;</span> },
+];
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">Navbar</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;bg-base-300 py-4&#x27;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;navbar px-8 max-w-6xl mx-auto flex-col sm:flex-row&#x27;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&#x27;/&#x27;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn btn-primary&#x27;</span>&gt;</span>
+            Next.js
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;menu menu-horizontal md:ml-8&#x27;</span>&gt;</span>
+          {links.map((link) =&gt; {
+            return (
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{link.href}</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">{link.href}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27; capitalize&#x27;</span>&gt;</span>
+                  {link.label}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            );
+          })}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></span>
+  );
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Navbar</span>;
+</code></pre>
+<p>app/layout</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Inter</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/font/google&#x27;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;./globals.css&#x27;</span>;
+
+<span class="hljs-comment">// alias</span>
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">Navbar</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/components/Navbar&#x27;</span>;
+
+<span class="hljs-keyword">const</span> inter = <span class="hljs-title class_">Inter</span>({ <span class="hljs-attr">subsets</span>: [<span class="hljs-string">&#x27;latin&#x27;</span>] });
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> metadata = {
+  <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;Next.js Tutorial&#x27;</span>,
+  <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;Build awesome stuff with Next.js!&#x27;</span>,
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">RootLayout</span>(<span class="hljs-params">{ children }</span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&#x27;en&#x27;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;bg-base-200&#x27;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{inter.className}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Navbar</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;px-8 py-20 max-w-6xl mx-auto &#x27;</span>&gt;</span>{children}<span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<h2 id="server-components-vs-client-components">Server Components VS Client Components</h2>
+<ul>
+<li>
+<p><a href="https://nextjs.org/docs/app/building-your-application/rendering/server-components">Server Components</a></p>
+</li>
+<li>
+<p><a href="https://nextjs.org/docs/app/building-your-application/rendering/client-components">Client Components</a></p>
+</li>
+<li>
+<p>BY DEFAULT, NEXT.JS USES SERVER COMPONENTS !!!!</p>
+</li>
+<li>
+<p>To use Client Components, you can add the React &quot;use client&quot; directive</p>
+</li>
+</ul>
+<h3 id="server-components">Server Components</h3>
+<p>Benefits :</p>
+<ul>
+<li>data fetching</li>
+<li>security</li>
+<li>caching</li>
+<li>bundle size</li>
+</ul>
+<p>Data Fetching: Server Components allow you to move data fetching to the server, closer to your data source. This can improve performance by reducing time it takes to fetch data needed for rendering, and the amount of requests the client needs to make.</p>
+<p>Security: Server Components allow you to keep sensitive data and logic on the server, such as tokens and API keys, without the risk of exposing them to the client.</p>
+<p>Caching: By rendering on the server, the result can be cached and reused on subsequent requests and across users. This can improve performance and reduce cost by reducing the amount of rendering and data fetching done on each request.</p>
+<p>Bundle Sizes: Server Components allow you to keep on the server the large dependencies that previously would impact the client JavaScript bundle size. This is beneficial for users with slower internet or less powerful devices, as the client does not have to download, parse and execute any JavaScript for Server Components.</p>
+<p>Initial Page Load and First Contentful Paint (FCP): On the server, we can generate HTML to allow users to view the page immediately, without waiting for the client to download, parse and execute the JavaScript needed to render the page.</p>
+<p>Search Engine Optimization and Social Network Shareability: The rendered HTML can be used by search engine bots to index your pages and social network bots to generate social card previews for your pages.</p>
+<p>Streaming: Server Components allow you to split the rendering work into chunks and stream them to the client as they become ready. This allows the user to see parts of the page earlier without having to wait for the entire page to be rendered on the server.</p>
+<h3 id="client-components">Client Components</h3>
+<p>Benefits :</p>
+<p>Interactivity: Client Components can use state, effects, and event listeners, meaning they can provide immediate feedback to the user and update the UI.</p>
+<p>Browser APIs: Client Components have access to browser APIs, like geolocation or localStorage, allowing you to build UI for specific use cases.</p>
+<h2 id="challenge---setup-counter">Challenge - Setup Counter</h2>
+<ul>
+<li>setup our home page (no restrictions)</li>
+<li>setup a simple counter in app/client/page.js</li>
+</ul>
+<h3 id="home-page-1">Home Page</h3>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Link</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/link&#x27;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Home</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-5xl mb-8 font-bold&#x27;</span>&gt;</span>Next.js Tutorial<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&#x27;/client&#x27;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn btn-accent&#x27;</span>&gt;</span>
+        get started
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<h3 id="counter--client-component">Counter ( Client Component)</h3>
+<pre><code class="language-js"><span class="hljs-comment">// try without</span>
+<span class="hljs-string">&#x27;use client&#x27;</span>;
+<span class="hljs-keyword">import</span> { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">Client</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> [count, setCount] = <span class="hljs-title function_">useState</span>(<span class="hljs-number">0</span>);
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-7xl font-bold mb-4 &#x27;</span>&gt;</span>{count}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn btn-primary&#x27;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setCount(count + 1)}&gt;
+        increase
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Client</span>;
+</code></pre>
+<h2 id="fetch-data-in-server-components">Fetch Data in Server Components</h2>
+<ul>
+<li>just add async and start using await 🚀🚀🚀</li>
+<li>the same for db</li>
+<li>Next.js extends the native Web fetch() API to allow each request on the server to set its own persistent caching semantics.</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> url = <span class="hljs-string">&#x27;someUrl&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">ServerComponent</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(url);
+  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> response.<span class="hljs-title function_">json</span>();
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-7xl&#x27;</span>&gt;</span>DrinksPage<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">ServerComponent</span>;
+</code></pre>
+<h2 id="challenge---fetch-data-in-drinks-page">Challenge - Fetch Data in Drinks Page</h2>
+<ul>
+<li>setup logic</li>
+<li>visit the page</li>
+<li>look for log in the terminal 😀</li>
+</ul>
+<p>app/drinks/page.js</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> url = <span class="hljs-string">&#x27;https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">DrinksPage</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(url);
+  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> response.<span class="hljs-title function_">json</span>();
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-7xl&#x27;</span>&gt;</span>DrinksPage<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">DrinksPage</span>;
+</code></pre>
+<h2 id="loading-component">Loading Component</h2>
+<p>The special file <code>loading.js</code> helps you create meaningful Loading UI with React Suspense. With this convention, you can show an instant loading state from the server while the content of a route segment loads. The new content is automatically swapped in once rendering is complete.</p>
+<ul>
+<li>drinks/loading.js</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">loading</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;loading&#x27;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>;
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> loading;
+</code></pre>
+<ul>
+<li>refactor drinks page</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">fetchDrinks</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-comment">// just for demo purposes</span>
+  <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> <span class="hljs-built_in">setTimeout</span>(resolve, <span class="hljs-number">1000</span>));
+  <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(url);
+  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> response.<span class="hljs-title function_">json</span>();
+  <span class="hljs-keyword">return</span> data;
+};
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">DrinksPage</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetchDrinks</span>();
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-7xl&#x27;</span>&gt;</span>DrinksPage<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">DrinksPage</span>;
+</code></pre>
+<h2 id="error-component">Error Component</h2>
+<p>The error.js file convention allows you to gracefully handle unexpected runtime errors in nested routes.</p>
+<ul>
+<li>drinks/error.js</li>
+<li>'use client'</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-string">&#x27;use client&#x27;</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">error</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>there was an error...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> error;
+</code></pre>
+<ul>
+<li>refactor drinks (optional)</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-comment">// modify the url</span>
+<span class="hljs-keyword">const</span> url = <span class="hljs-string">&#x27;https://www.thecocktaildb.com/api/json/v1/1/search.phps?f=a&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">fetchDrinks</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-comment">// just for demo purposes</span>
+  <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> <span class="hljs-built_in">setTimeout</span>(resolve, <span class="hljs-number">1000</span>));
+  <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(url);
+  <span class="hljs-comment">// throw error</span>
+  <span class="hljs-keyword">if</span> (!response.<span class="hljs-property">ok</span>) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">&#x27;Failed to fetch drinks...&#x27;</span>);
+  }
+  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> response.<span class="hljs-title function_">json</span>();
+  <span class="hljs-keyword">return</span> data;
+};
+</code></pre>
+<ul>
+<li>DON'T FORGET TO FIX THE URL 😜😜😜</li>
+</ul>
+<h2 id="nested-layouts">Nested Layouts</h2>
+<ul>
+<li>
+<p>create app/drinks/layout.js</p>
+</li>
+<li>
+<p>UI will be applied to app/drinks - segment</p>
+</li>
+<li>
+<p>don't forget about the &quot;children&quot;</p>
+</li>
+<li>
+<p>we can fetch data in the layout but...
+at the moment can't pass data down to children (pages) 😞</p>
+<p>layout.js</p>
+</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">DrinksLayout</span>(<span class="hljs-params">{ children }</span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;max-w-xl &#x27;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;mockup-code mb-8&#x27;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">data-prefix</span>=<span class="hljs-string">&#x27;$&#x27;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>npx create-next-app@latest nextjs-tutorial<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      {children}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<h2 id="dynamic-routes">Dynamic Routes</h2>
+<ul>
+<li>app/drinks/[id]/page.js</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">page</span> = (<span class="hljs-params">{ params }</span>) =&gt; {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(params);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-7xl&#x27;</span>&gt;</span>{params.id}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> page;
+</code></pre>
+<h2 id="challenge---drinks-list">Challenge - Drinks List</h2>
+<ul>
+<li>render a list of drinks</li>
+<li>each item is a link to a drink[id] page</li>
+</ul>
+<h2 id="drinks-list">Drinks List</h2>
+<ul>
+<li>create components/DrinksList.jsx</li>
+<li>render in drinks/page and pass the drinks down</li>
+<li>iterate over the drinks and return links</li>
+</ul>
+<p>DrinksList.jsx</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Link</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/link&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">DrinksList</span> = (<span class="hljs-params">{ drinks }</span>) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;menu menu-vertical pl-0&#x27;</span>&gt;</span>
+      {drinks.map((drink) =&gt; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{drink.idDrink}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Link</span>
+            <span class="hljs-attr">href</span>=<span class="hljs-string">{</span>`/<span class="hljs-attr">drinks</span>/${<span class="hljs-attr">drink.idDrink</span>}`}
+            <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-xl font-medium&#x27;</span>
+          &gt;</span>
+            {drink.strDrink}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      ))}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">DrinksList</span>;
+</code></pre>
+<p>app/drinks/page.js</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">DrinksList</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/components/DrinksList&#x27;</span>;
+
+<span class="hljs-keyword">const</span> url = <span class="hljs-string">&#x27;https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">fetchDrinks</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-comment">// just for demo purposes</span>
+  <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> <span class="hljs-built_in">setTimeout</span>(resolve, <span class="hljs-number">1000</span>));
+  <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(url);
+
+  <span class="hljs-keyword">if</span> (!response.<span class="hljs-property">ok</span>) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">&#x27;Failed to fetch drinks...&#x27;</span>);
+  }
+  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> response.<span class="hljs-title function_">json</span>();
+  <span class="hljs-keyword">return</span> data;
+};
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">DrinksPage</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetchDrinks</span>();
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">DrinksList</span> <span class="hljs-attr">drinks</span>=<span class="hljs-string">{data.drinks}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">DrinksPage</span>;
+</code></pre>
+<h2 id="challenge---render-single-drink">Challenge - Render Single Drink</h2>
+<ul>
+<li>in drinks/[id], fetch and render drink title</li>
+<li>hint:params object</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> url = <span class="hljs-string">&#x27;https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=&#x27;</span>;
+</code></pre>
+<h2 id="render-single-drink">Render Single Drink</h2>
+<p>drinks/[id]/page.js</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Link</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/link&#x27;</span>;
+<span class="hljs-keyword">const</span> url = <span class="hljs-string">&#x27;https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">getSingleDrink</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">id</span>) =&gt; {
+  <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">`<span class="hljs-subst">${url}</span><span class="hljs-subst">${id}</span>`</span>);
+
+  <span class="hljs-keyword">if</span> (!res.<span class="hljs-property">ok</span>) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">&#x27;Failed to fetch drink...&#x27;</span>);
+  }
+  <span class="hljs-keyword">return</span> res.<span class="hljs-title function_">json</span>();
+};
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">SingleDrink</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">{ params }</span>) =&gt; {
+  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> <span class="hljs-title function_">getSingleDrink</span>(params.<span class="hljs-property">id</span>);
+  <span class="hljs-keyword">const</span> title = data?.<span class="hljs-property">drinks</span>[<span class="hljs-number">0</span>]?.<span class="hljs-property">strDrink</span>;
+  <span class="hljs-keyword">const</span> imgSrc = data?.<span class="hljs-property">drinks</span>[<span class="hljs-number">0</span>]?.<span class="hljs-property">strDrinkThumb</span>;
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&#x27;/drinks&#x27;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn btn-primary mt-8 mb-12&#x27;</span>&gt;</span>
+        back to drinks
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-4xl mb-8&#x27;</span>&gt;</span>{title}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">SingleDrink</span>;
+</code></pre>
+<h2 id="next-image-component">Next Image Component</h2>
+<ul>
+<li>get random image from pexels site
+<a href="https://www.pexels.com/photo/red-glass-with-garnished-beverage-2842876/">Random Drink</a></li>
+</ul>
+<p>The Next.js <code>Image</code> component extends the HTML <code>img</code> element with features for automatic image optimization:</p>
+<ul>
+<li>Size Optimization: Automatically serve correctly sized images for each device, using modern image formats like WebP and AVIF.</li>
+<li>Visual Stability: Prevent layout shift automatically when images are loading.</li>
+<li>Faster Page Loads: Images are only loaded when they enter the viewport using native browser lazy loading, with optional blur-up placeholders.</li>
+<li>Asset Flexibility: On-demand image resizing, even for images stored on remote servers</li>
+</ul>
+<p>drinks[id]/page.js</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Link</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/link&#x27;</span>;
+<span class="hljs-keyword">const</span> url = <span class="hljs-string">&#x27;https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=&#x27;</span>;
+
+<span class="hljs-keyword">import</span> drinkImg <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./drink.jpg&#x27;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">Image</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/image&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">SingleDrink</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">{ params }</span>) =&gt; {
+  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> <span class="hljs-title function_">getSingleDrink</span>(params.<span class="hljs-property">id</span>);
+  <span class="hljs-keyword">const</span> title = data?.<span class="hljs-property">drinks</span>[<span class="hljs-number">0</span>]?.<span class="hljs-property">strDrink</span>;
+  <span class="hljs-keyword">const</span> imgSrc = data?.<span class="hljs-property">drinks</span>[<span class="hljs-number">0</span>]?.<span class="hljs-property">strDrinkThumb</span>;
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&#x27;/drinks&#x27;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn btn-primary mt-8 mb-12&#x27;</span>&gt;</span>
+        back to drinks
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+      {/* <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">{imgSrc}</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&#x27;&#x27;</span> /&gt;</span> */}
+      <span class="hljs-tag">&lt;<span class="hljs-name">Image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">{drinkImg}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;w-48 h-48 rounded&#x27;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&#x27;&#x27;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-4xl mb-8&#x27;</span>&gt;</span>{title}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">SingleDrink</span>;
+</code></pre>
+<h2 id="remote-images">Remote Images</h2>
+<ul>
+<li>
+<p>To use a remote image, the src property should be a URL string.</p>
+</li>
+<li>
+<p>Since Next.js does not have access to remote files during the build process, you'll need to provide the width, height and optional blurDataURL props manually.</p>
+</li>
+<li>
+<p>The width and height attributes are used to infer the correct aspect ratio of image and avoid layout shift from the image loading in. The width and height do not determine the rendered size of the image file.</p>
+</li>
+<li>
+<p>To safely allow optimizing images, define a list of supported URL patterns in next.config.js. Be as specific as possible to prevent malicious usage.</p>
+</li>
+<li>
+<p>restart dev server</p>
+</li>
+<li>
+<p>priority property to prioritize the image for loading</p>
+</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">SingleDrink</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">{ params }</span>) =&gt; {
+  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> <span class="hljs-title function_">getSingleDrink</span>(params.<span class="hljs-property">id</span>);
+  <span class="hljs-keyword">const</span> title = data?.<span class="hljs-property">drinks</span>[<span class="hljs-number">0</span>]?.<span class="hljs-property">strDrink</span>;
+  <span class="hljs-keyword">const</span> imgSrc = data?.<span class="hljs-property">drinks</span>[<span class="hljs-number">0</span>]?.<span class="hljs-property">strDrinkThumb</span>;
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&#x27;/drinks&#x27;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn btn-primary mt-8 mb-12&#x27;</span>&gt;</span>
+        back to drinks
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+      {/* <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">{imgSrc}</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&#x27;&#x27;</span> /&gt;</span> */}
+      {/* <span class="hljs-tag">&lt;<span class="hljs-name">Image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">{drinkImg}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;w-48 h-48 rounded&#x27;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&#x27;&#x27;</span> /&gt;</span> */}
+      <span class="hljs-tag">&lt;<span class="hljs-name">Image</span>
+        <span class="hljs-attr">src</span>=<span class="hljs-string">{imgSrc}</span>
+        <span class="hljs-attr">width</span>=<span class="hljs-string">{300}</span>
+        <span class="hljs-attr">height</span>=<span class="hljs-string">{300}</span>
+        <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;w-48 h-48 rounded shadow-lg mb-4&#x27;</span>
+        <span class="hljs-attr">priority</span>
+        <span class="hljs-attr">alt</span>=<span class="hljs-string">&#x27;&#x27;</span>
+      /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-4xl mb-8&#x27;</span>&gt;</span>{title}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">SingleDrink</span>;
+</code></pre>
+<pre><code class="language-js">** @type {<span class="hljs-title function_">import</span>(<span class="hljs-string">&#x27;next&#x27;</span>).<span class="hljs-property">NextConfig</span>} */
+<span class="hljs-keyword">const</span> nextConfig = {
+  <span class="hljs-attr">images</span>: {
+    <span class="hljs-attr">remotePatterns</span>: [
+      {
+        <span class="hljs-attr">protocol</span>: <span class="hljs-string">&#x27;https&#x27;</span>,
+        <span class="hljs-attr">hostname</span>: <span class="hljs-string">&#x27;www.thecocktaildb.com&#x27;</span>,
+        <span class="hljs-attr">port</span>: <span class="hljs-string">&#x27;&#x27;</span>,
+        <span class="hljs-attr">pathname</span>: <span class="hljs-string">&#x27;/images/**&#x27;</span>,
+      },
+    ],
+  },
+};
+
+<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = nextConfig;
+</code></pre>
+<h2 id="remote-images---responsive">Remote Images - Responsive</h2>
+<ul>
+<li>
+<p>The fill prop allows your image to be sized by its parent element</p>
+</li>
+<li>
+<p>sizes property helps the browser select the most appropriate image size to load based on the user's device and screen size, improving website performance and user experience.</p>
+<p>DrinksList.jsx</p>
+</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Image</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/image&#x27;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">Link</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/link&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">DrinksList</span> = (<span class="hljs-params">{ drinks }</span>) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;grid sm:grid-cols-2 gap-6 mt-6&#x27;</span>&gt;</span>
+      {drinks.map((drink) =&gt; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{drink.idDrink}</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Link</span>
+            <span class="hljs-attr">href</span>=<span class="hljs-string">{</span>`/<span class="hljs-attr">drinks</span>/${<span class="hljs-attr">drink.idDrink</span>}`}
+            <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-xl font-medium&#x27;</span>
+          &gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;relative h-48 mb-4&#x27;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">Image</span>
+                <span class="hljs-attr">src</span>=<span class="hljs-string">{drink.strDrinkThumb}</span>
+                <span class="hljs-attr">fill</span>
+                <span class="hljs-attr">sizes</span>=<span class="hljs-string">&#x27;(max-width: 768px) 100vw, (max-width: 1200px) 50vw&#x27;</span>
+                <span class="hljs-attr">alt</span>=<span class="hljs-string">{drink.strDrink}</span>
+                <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;rounded-md object-cover&#x27;</span>
+              /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            {drink.strDrink}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      ))}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">DrinksList</span>;
+</code></pre>
+<h2 id="more-routing">More Routing</h2>
+<ul>
+<li>
+<p>Private Folders
+_folder</p>
+</li>
+<li>
+<p>Route Groups
+(dashboard)</p>
+</li>
+<li>
+<p>Dynamic Routes</p>
+<ul>
+<li>[...folder] - Catch-all route segment</li>
+<li>[[...folder]] Optional catch-all route segment (used by Clerk)</li>
+</ul>
+</li>
+<li>
+<p>create test folder app/_css</p>
+</li>
+<li>
+<p>create app/(dashboard)/auth</p>
+<ul>
+<li>the url is just '/auth'</li>
+</ul>
+</li>
+<li>
+<p>create app/(dashboard)/auth/[sign-in]</p>
+</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">SignInPage</span> = (<span class="hljs-params">{ params }</span>) =&gt; {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(params);
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>SignInPage<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">SignInPage</span>;
+</code></pre>
+<ul>
+<li>create app/(dashboard)/auth/[...sign-in]</li>
+<li>create app/(dashboard)/auth/[[...sign-in]]</li>
+</ul>
+<h2 id="prisma">Prisma</h2>
+<ul>
+<li>install prisma vs-code extension</li>
+</ul>
+<p><a href="https://www.prisma.io/docs/concepts/database-connectors/sqlite">Prisma sqlite</a></p>
+<p>Prisma ORM is a database toolkit that simplifies database access in web applications. It allows developers to interact with databases using a type-safe and auto-generated API, making database operations easier and more secure.</p>
+<ul>
+<li>Prisma server: A standalone infrastructure component sitting on top of your database.</li>
+<li>Prisma client: An auto-generated library that connects to the Prisma server and lets you read, write and stream data in your database. It is used for data access in your applications.</li>
+</ul>
+<pre><code class="language-sh">npm install prisma --save-dev
+npm install @prisma/client
+</code></pre>
+<pre><code class="language-sh">npx prisma init
+</code></pre>
+<p>This creates a new prisma directory with your Prisma schema file and configures SQLite as your database. You're now ready to model your data and create your database with some tables.</p>
+<pre><code class="language-prisma">generator client {
+  provider = &quot;prisma-client-js&quot;
+}
+
+datasource db {
+  provider = &quot;sqlite&quot;
+  url      = env(&quot;DATABASE_URL&quot;)
+}
+</code></pre>
+<ul>
+<li>ADD .ENV TO .GITIGNORE !!!!</li>
+</ul>
+<p>.env</p>
+<pre><code class="language-js"><span class="hljs-variable constant_">DATABASE_URL</span> = <span class="hljs-string">&#x27;file:./dev.db&#x27;</span>;
+</code></pre>
+<h2 id="setup-instance">Setup Instance</h2>
+<p>In development, the command next dev clears Node.js cache on run. This in turn initializes a new PrismaClient instance each time due to hot reloading that creates a connection to the database. This can quickly exhaust the database connections as each PrismaClient instance holds its own connection pool.</p>
+<p><a href="https://www.prisma.io/docs/guides/other/troubleshooting-orm/help-articles/nextjs-prisma-client-dev-practices#solution">Prisma Instance</a></p>
+<ul>
+<li>create utils/db.ts</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">PrismaClient</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@prisma/client&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">prismaClientSingleton</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">PrismaClient</span>();
+};
+
+type <span class="hljs-title class_">PrismaClientSingleton</span> = <span class="hljs-title class_">ReturnType</span>&lt;<span class="hljs-keyword">typeof</span> prismaClientSingleton&gt;;
+
+<span class="hljs-keyword">const</span> globalForPrisma = globalThis <span class="hljs-keyword">as</span> unknown <span class="hljs-keyword">as</span> {
+  <span class="hljs-attr">prisma</span>: <span class="hljs-title class_">PrismaClientSingleton</span> | <span class="hljs-literal">undefined</span>;
+};
+
+<span class="hljs-keyword">const</span> prisma = globalForPrisma.<span class="hljs-property">prisma</span> ?? <span class="hljs-title function_">prismaClientSingleton</span>();
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> prisma;
+
+<span class="hljs-keyword">if</span> (process.<span class="hljs-property">env</span>.<span class="hljs-property">NODE_ENV</span> !== <span class="hljs-string">&#x27;production&#x27;</span>) globalForPrisma.<span class="hljs-property">prisma</span> = prisma;
+</code></pre>
+<h2 id="create-model">Create Model</h2>
+<pre><code class="language-prisma">model Task {
+  id String @id @default(uuid())
+  content String
+  createdAt DateTime @default(now())
+  completed Boolean @default(false)
+}
+</code></pre>
+<ul>
+<li>safely applies and tracks changes to the database structure.</li>
+</ul>
+<pre><code class="language-sh">npx prisma migrate dev
+</code></pre>
+<ul>
+<li>in a new terminal window</li>
+<li>launch Prisma Studio, which is a visual editor for your database.</li>
+<li><a href="http://localhost:5555">http://localhost:5555</a></li>
+</ul>
+<pre><code class="language-sh">npx prisma studio
+</code></pre>
+<h3 id="prisma-model">Prisma Model</h3>
+<p>The Prisma model provided is a representation of a Task entity in the context of a database schema. Here's a detailed description of each component within this model:</p>
+<p>model Task { ... }: This is the definition of the Task model. In Prisma, a model represents a table in the database. It serves as a blueprint for the records that will be stored in the corresponding table, defining the structure and behavior of the data.</p>
+<p>id String @id @default(uuid()): This line defines a field named id of type String which is marked with @id, signifying that this field is the primary key of the model. The @default(uuid()) directive indicates that the default value for this field will be a UUID (Universally Unique Identifier) generated by Prisma.</p>
+<p>content String: This line declares a field named content of type String. This field will store textual data, presumably the details or description of the task.</p>
+<p>createdAt DateTime @default(now()): This field is named createdAt and is of type DateTime. It has a default value set to the current timestamp at the time of record creation, indicated by the @default(now()) directive.</p>
+<p>completed Boolean @default(false): Lastly, the completed field is of type Boolean and is used to indicate whether the task has been completed. It defaults to false, meaning when a new task record is created, it is considered incomplete by default.</p>
+<p>In Prisma, the term &quot;model&quot; refers to an abstraction that maps to a table in your database. Prisma models are defined in the Prisma schema, which is a declarative representation of your database's structure. Each model in the Prisma schema corresponds to a table in the database, and each field within a model corresponds to a column in that table. This schema plays a central role in Prisma's features, such as type-safe database access and migrations.</p>
+<h2 id="prisma-example">Prisma Example</h2>
+<ul>
+<li>remove query</li>
+<li>fix the links the navbar</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> prisma <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/db&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">prismaHandlers</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">create</span>({
+    <span class="hljs-attr">data</span>: {
+      <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;wake up&#x27;</span>,
+    },
+  });
+  <span class="hljs-keyword">const</span> allTasks = <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">findMany</span>({
+    <span class="hljs-attr">orderBy</span>: {
+      <span class="hljs-attr">createdAt</span>: <span class="hljs-string">&#x27;desc&#x27;</span>,
+    },
+  });
+
+  <span class="hljs-keyword">return</span> allTasks;
+};
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">Prisma</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> tasks = <span class="hljs-keyword">await</span> <span class="hljs-title function_">prismaHandlers</span>();
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-3xl font-medium mb-4&#x27;</span>&gt;</span>Prisma Example <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      {tasks.map((task) =&gt; {
+        return (
+          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{task.id}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-xl py-2&#x27;</span>&gt;</span>
+            😬 {task.content}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        );
+      })}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Prisma</span>;
+</code></pre>
+<h2 id="optional---prisma-crud">Optional - Prisma Crud</h2>
+<p><a href="https://www.prisma.io/docs/concepts/components/prisma-client/crud">Prisma Docs</a></p>
+<ul>
+<li>Create Single Record</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> task = <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">create</span>({
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;some task&#x27;</span>,
+  },
+});
+</code></pre>
+<ul>
+<li>Get All Records</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> tasks = <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">findMany</span>();
+</code></pre>
+<ul>
+<li>Get record by ID or unique identifier</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-comment">// By unique identifier</span>
+<span class="hljs-keyword">const</span> user = <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">user</span>.<span class="hljs-title function_">findUnique</span>({
+  <span class="hljs-attr">where</span>: {
+    <span class="hljs-attr">email</span>: <span class="hljs-string">&#x27;elsa@prisma.io&#x27;</span>,
+  },
+});
+
+<span class="hljs-comment">// By ID</span>
+<span class="hljs-keyword">const</span> task = <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">findUnique</span>({
+  <span class="hljs-attr">where</span>: {
+    <span class="hljs-attr">id</span>: id,
+  },
+});
+</code></pre>
+<ul>
+<li>Update Record</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> updateTask = <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">update</span>({
+  <span class="hljs-attr">where</span>: {
+    <span class="hljs-attr">id</span>: id,
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;updated task&#x27;</span>,
+  },
+});
+</code></pre>
+<ul>
+<li>Update or create records</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> upsertTask = <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">upsert</span>({
+  <span class="hljs-attr">where</span>: {
+    <span class="hljs-attr">id</span>: id,
+  },
+  <span class="hljs-attr">update</span>: {
+    <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;some value&#x27;</span>,
+  },
+  <span class="hljs-attr">create</span>: {
+    <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;some value&#x27;</span>,
+  },
+});
+</code></pre>
+<ul>
+<li>Delete a single record</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> deleteTask = <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">delete</span>({
+  <span class="hljs-attr">where</span>: {
+    <span class="hljs-attr">id</span>: id,
+  },
+});
+</code></pre>
+<h2 id="challenge---display-tasks">Challenge - Display Tasks</h2>
+<ul>
+<li>create TaskForm, TaskList, DeleteForm components</li>
+<li>render them in tasks page</li>
+<li>in TaskList render all tasks</li>
+<li>also display editBtn and DeleteForm</li>
+<li>editBtn - link to single task page</li>
+<li>reference the complete project</li>
+</ul>
+<p>tasks/page.js</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">TaskForm</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/components/TaskForm&#x27;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">TaskList</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/components/TaskList&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">TasksPage</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;max-w-lg&#x27;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">TaskForm</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">TaskList</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">TasksPage</span>;
+</code></pre>
+<p>components/TaskList</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> prisma <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/db&#x27;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">Link</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/link&#x27;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">DeleteForm</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./DeleteForm&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">TaskList</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> tasks = <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">findMany</span>({
+    <span class="hljs-attr">orderBy</span>: {
+      <span class="hljs-attr">createdAt</span>: <span class="hljs-string">&#x27;desc&#x27;</span>,
+    },
+  });
+  <span class="hljs-keyword">if</span> (tasks.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;mt-8 font-medium text-lg&#x27;</span>&gt;</span>No tasks to show<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></span>;
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;mt-8&#x27;</span>&gt;</span>
+      {tasks.map((task) =&gt; (
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>
+          <span class="hljs-attr">key</span>=<span class="hljs-string">{task.id}</span>
+          <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;flex justify-between items-center px-6 py-4 mb-4 border border-base-300 rounded-lg shadow-lg&#x27;</span>
+        &gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>
+            <span class="hljs-attr">className</span>=<span class="hljs-string">{</span>`<span class="hljs-attr">text-lg</span> <span class="hljs-attr">capitalize</span> ${
+              <span class="hljs-attr">task.completed</span> ? &#x27;<span class="hljs-attr">line-through</span>&#x27; <span class="hljs-attr">:</span> <span class="hljs-attr">null</span>
+            }`}
+          &gt;</span>
+            {task.content}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;flex gap-6 items-center&#x27;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">{</span>`/<span class="hljs-attr">tasks</span>/${<span class="hljs-attr">task.id</span>}`} <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn btn-accent btn-xs&#x27;</span>&gt;</span>
+              edit
+            <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">DeleteForm</span> <span class="hljs-attr">id</span>=<span class="hljs-string">{task.id}</span> /&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      ))}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">TaskList</span>;
+</code></pre>
+<h2 id="server-actions">Server Actions</h2>
+<ul>
+<li>
+<p>asynchronous server functions that can be called directly from your components.</p>
+</li>
+<li>
+<p>typical setup for server state mutations (create, update, delete)</p>
+<ul>
+<li>endpoint on the server (api route on Next.js)</li>
+<li>make request from the front-end
+<ul>
+<li>setup form, handle submission etc</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Next.js server actions allow you to mutate server state directly from within a React component by defining server-side logic alongside client-side interactions.</p>
+</li>
+</ul>
+<p>Rules :</p>
+<ul>
+<li>must be async</li>
+<li>add 'use server' in function body
+<ul>
+<li>use only in React Server Component</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">ServerComponent</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">myAction</span>(<span class="hljs-params">formData</span>) {
+    <span class="hljs-string">&#x27;use server&#x27;</span>;
+    <span class="hljs-comment">// access input values with formData</span>
+    <span class="hljs-comment">// formData.get(&#x27;name&#x27;)</span>
+    <span class="hljs-comment">// mutate data (server)</span>
+    <span class="hljs-comment">// revalidate cache</span>
+  }
+
+  <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">{myAction}</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>;
+}
+</code></pre>
+<ul>
+<li>or setup in a separate file ('use server' at the top)
+<ul>
+<li>can use in both (RSC and RCC)</li>
+</ul>
+</li>
+</ul>
+<p>utils/actions.js</p>
+<pre><code class="language-js"><span class="hljs-string">&#x27;use server&#x27;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">myAction</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<pre><code class="language-js"><span class="hljs-string">&#x27;use client&#x27;</span>;
+
+<span class="hljs-keyword">import</span> { myAction } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./actions&#x27;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">ClientComponent</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">{myAction}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;submit&#x27;</span>&gt;</span>Add to Cart<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<h2 id="taskform">TaskForm</h2>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> prisma <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/db&#x27;</span>;
+<span class="hljs-keyword">import</span> { revalidatePath } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/cache&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">createTask</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">formData</span>) =&gt; {
+  <span class="hljs-string">&#x27;use server&#x27;</span>;
+  <span class="hljs-keyword">const</span> content = formData.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;content&#x27;</span>);
+  <span class="hljs-comment">// some validation here</span>
+
+  <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">create</span>({
+    <span class="hljs-attr">data</span>: {
+      content,
+    },
+  });
+  <span class="hljs-comment">// revalidate path</span>
+  <span class="hljs-title function_">revalidatePath</span>(<span class="hljs-string">&#x27;/tasks&#x27;</span>);
+};
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">TaskForm</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">{createTask}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;join w-full&#x27;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+          <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;input input-bordered join-item w-full&#x27;</span>
+          <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&#x27;Type Here&#x27;</span>
+          <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;text&#x27;</span>
+          <span class="hljs-attr">name</span>=<span class="hljs-string">&#x27;content&#x27;</span>
+          <span class="hljs-attr">required</span>
+        /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;submit&#x27;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn join-item btn-primary&#x27;</span>&gt;</span>
+          create task
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">TaskForm</span>;
+</code></pre>
+<h2 id="refactor">Refactor</h2>
+<ul>
+<li>create utils/actions</li>
+<li>move get all tasks and create task functionality</li>
+<li>refactor TaskForm and TaskList</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-string">&#x27;use server&#x27;</span>;
+
+<span class="hljs-keyword">import</span> prisma <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/db&#x27;</span>;
+<span class="hljs-keyword">import</span> { revalidatePath } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/cache&#x27;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">getAllTasks</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">findMany</span>({
+    <span class="hljs-attr">orderBy</span>: {
+      <span class="hljs-attr">createdAt</span>: <span class="hljs-string">&#x27;desc&#x27;</span>,
+    },
+  });
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">createTask</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">formData</span>) =&gt; {
+  <span class="hljs-keyword">const</span> content = formData.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;content&#x27;</span>);
+  <span class="hljs-comment">// some validation here</span>
+
+  <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">create</span>({
+    <span class="hljs-attr">data</span>: {
+      content,
+    },
+  });
+  <span class="hljs-comment">// revalidate path</span>
+  <span class="hljs-title function_">revalidatePath</span>(<span class="hljs-string">&#x27;/tasks&#x27;</span>);
+};
+</code></pre>
+<h2 id="deleteform">DeleteForm</h2>
+<ul>
+<li>will use &quot;action&quot; approach since it works without JS</li>
+<li>invoke by using startTransition (useTransition hook)</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> { deleteTask } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/actions&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">DeleteForm</span> = (<span class="hljs-params">{ id }</span>) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">{deleteTask}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;hidden&#x27;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&#x27;id&#x27;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{id}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn btn-error btn-xs&#x27;</span>&gt;</span>delete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">DeleteForm</span>;
+</code></pre>
+<p>utils/actions</p>
+<pre><code class="language-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">deleteTask</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">formData</span>) =&gt; {
+  <span class="hljs-keyword">const</span> id = formData.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;id&#x27;</span>);
+  <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">delete</span>({ <span class="hljs-attr">where</span>: { id } });
+  <span class="hljs-title function_">revalidatePath</span>(<span class="hljs-string">&#x27;/tasks&#x27;</span>);
+};
+</code></pre>
+<h2 id="challenge---edit-task">Challenge - Edit Task</h2>
+<ul>
+<li>create single task page</li>
+<li>get task info (hint:params)</li>
+<li>create EditForm component</li>
+<li>setup form with all the inputs</li>
+<li>render in single task page</li>
+<li>create server action to update task</li>
+<li>extra - redirect when complete</li>
+</ul>
+<h2 id="edit-task">Edit Task</h2>
+<p>tasks/[id]/page.js</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">EditForm</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/components/EditForm&#x27;</span>;
+<span class="hljs-keyword">import</span> { getTask } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/actions&#x27;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">Link</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/link&#x27;</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">TaskPage</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">{ params }</span>) =&gt; {
+  <span class="hljs-keyword">const</span> task = <span class="hljs-keyword">await</span> <span class="hljs-title function_">getTask</span>(params.<span class="hljs-property">id</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;mb-16&#x27;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&#x27;/tasks&#x27;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn btn-accent&#x27;</span>&gt;</span>
+          Back to Tasks
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">EditForm</span> <span class="hljs-attr">task</span>=<span class="hljs-string">{task}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">TaskPage</span>;
+</code></pre>
+<p>actions</p>
+<pre><code class="language-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">getTask</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">id</span>) =&gt; {
+  <span class="hljs-keyword">return</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">findUnique</span>({
+    <span class="hljs-attr">where</span>: {
+      id,
+    },
+  });
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">editTask</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">formData</span>) =&gt; {
+  <span class="hljs-keyword">const</span> id = formData.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;id&#x27;</span>);
+  <span class="hljs-keyword">const</span> content = formData.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;content&#x27;</span>);
+  <span class="hljs-keyword">const</span> completed = formData.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;completed&#x27;</span>);
+
+  <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">update</span>({
+    <span class="hljs-attr">where</span>: {
+      <span class="hljs-attr">id</span>: id,
+    },
+    <span class="hljs-attr">data</span>: {
+      <span class="hljs-attr">content</span>: content,
+      <span class="hljs-attr">completed</span>: completed === <span class="hljs-string">&#x27;on&#x27;</span> ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>,
+    },
+  });
+  <span class="hljs-comment">// redirect won&#x27;t works unless the component has &#x27;use client&#x27;</span>
+  <span class="hljs-comment">// another option, setup the editTask in the component directly</span>
+  <span class="hljs-title function_">redirect</span>(<span class="hljs-string">&#x27;/tasks&#x27;</span>);
+};
+</code></pre>
+<p>EditForm.js</p>
+<pre><code class="language-js"><span class="hljs-string">&#x27;use client&#x27;</span>;
+<span class="hljs-keyword">import</span> { editTask } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/actions&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">EditForm</span> = (<span class="hljs-params">{ task }</span>) =&gt; {
+  <span class="hljs-keyword">const</span> { id, completed, content } = task;
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>
+      <span class="hljs-attr">action</span>=<span class="hljs-string">{editTask}</span>
+      <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;max-w-sm bg-base-100 p-12 border border-base-300  rounded-lg&#x27;</span>
+    &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;hidden&#x27;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&#x27;id&#x27;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{id}</span> /&gt;</span>
+      {/* content */}
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+        <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;text&#x27;</span>
+        <span class="hljs-attr">required</span>
+        <span class="hljs-attr">defaultValue</span>=<span class="hljs-string">{content}</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">&#x27;content&#x27;</span>
+        <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;input input-bordered w-full&#x27;</span>
+      /&gt;</span>
+
+      {/* completed */}
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;form-control my-4&#x27;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;label cursor-pointer&#x27;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;label-text&#x27;</span>&gt;</span>Completed<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+            <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;checkbox&#x27;</span>
+            <span class="hljs-attr">defaultChecked</span>=<span class="hljs-string">{completed}</span>
+            <span class="hljs-attr">name</span>=<span class="hljs-string">&#x27;completed&#x27;</span>
+            <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;checkbox checkbox-primary checkbox-sm&#x27;</span>
+          /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn btn-primary btn-block btn-sm&#x27;</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">EditForm</span>;
+</code></pre>
+<h2 id="server-actions---loading-state-response-errors">Server Actions - Loading State, Response, Errors</h2>
+<ul>
+<li>clone TaskForm - copy and rename TaskFormCustom</li>
+<li>make it client component</li>
+<li>import and replace in Tasks page</li>
+<li>clone createTask in actions - copy and rename createTaskCustom</li>
+<li>import and replace in TaskFormCustom component</li>
+</ul>
+<h2 id="server-actions---loading-state">Server Actions - Loading State</h2>
+<p>TaskFormCustom</p>
+<pre><code class="language-js"><span class="hljs-string">&#x27;use client&#x27;</span>;
+
+<span class="hljs-keyword">import</span> { createTaskCustom } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/actions&#x27;</span>;
+<span class="hljs-keyword">import</span> { useFormStatus } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-dom&#x27;</span>;
+<span class="hljs-comment">// The useFormStatus Hook provides status information of the last form submission.</span>
+<span class="hljs-comment">// useFormState is a Hook that allows you to update state based on the result of a form action.</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">SubmitButton</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> { pending } = <span class="hljs-title function_">useFormStatus</span>();
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+      <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;submit&#x27;</span>
+      <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn join-item btn-primary&#x27;</span>
+      <span class="hljs-attr">disabled</span>=<span class="hljs-string">{pending}</span>
+    &gt;</span>
+      {pending ? &#x27;please wait... &#x27; : &#x27;create task&#x27;}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+  );
+};
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">TaskForm</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">{createTaskCustom}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;join w-full&#x27;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+          <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;input input-bordered join-item w-full&#x27;</span>
+          <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&#x27;Type Here&#x27;</span>
+          <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;text&#x27;</span>
+          <span class="hljs-attr">name</span>=<span class="hljs-string">&#x27;content&#x27;</span>
+          <span class="hljs-attr">required</span>
+        /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">SubmitButton</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">TaskForm</span>;
+</code></pre>
+<pre><code class="language-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">createTaskCustom</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">formData</span>) =&gt; {
+  <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> <span class="hljs-built_in">setTimeout</span>(resolve, <span class="hljs-number">2000</span>));
+  <span class="hljs-keyword">const</span> content = formData.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;content&#x27;</span>);
+  <span class="hljs-comment">// some validation here</span>
+
+  <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">create</span>({
+    <span class="hljs-attr">data</span>: {
+      content,
+    },
+  });
+  <span class="hljs-comment">// revalidate path</span>
+  <span class="hljs-title function_">revalidatePath</span>(<span class="hljs-string">&#x27;/tasks&#x27;</span>);
+};
+</code></pre>
+<h2 id="error-handling-and-response-to-user">Error Handling and Response To User</h2>
+<p>TaskFormCustom.jsx</p>
+<pre><code class="language-js"><span class="hljs-string">&#x27;use client&#x27;</span>;
+
+<span class="hljs-keyword">import</span> { createTaskCustom } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/actions&#x27;</span>;
+<span class="hljs-keyword">import</span> { useFormStatus, useFormState } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-dom&#x27;</span>;
+<span class="hljs-comment">// The useFormStatus Hook provides status information of the last form submission.</span>
+<span class="hljs-comment">// useFormState is a Hook that allows you to update state based on the result of a form action.</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">SubmitButton</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> { pending } = <span class="hljs-title function_">useFormStatus</span>();
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+      <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;submit&#x27;</span>
+      <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn join-item btn-primary&#x27;</span>
+      <span class="hljs-attr">disabled</span>=<span class="hljs-string">{pending}</span>
+    &gt;</span>
+      {pending ? &#x27;please wait... &#x27; : &#x27;create task&#x27;}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+  );
+};
+
+<span class="hljs-keyword">const</span> initialState = {
+  <span class="hljs-attr">message</span>: <span class="hljs-literal">null</span>,
+};
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">TaskForm</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> [state, formAction] = <span class="hljs-title function_">useFormState</span>(createTaskCustom, initialState);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">{formAction}</span>&gt;</span>
+      {state.message ? <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;mb-2&#x27;</span>&gt;</span>{state.message}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span> : null}
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;join w-full&#x27;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+          <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;input input-bordered join-item w-full&#x27;</span>
+          <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&#x27;Type Here&#x27;</span>
+          <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;text&#x27;</span>
+          <span class="hljs-attr">name</span>=<span class="hljs-string">&#x27;content&#x27;</span>
+          <span class="hljs-attr">required</span>
+        /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">SubmitButton</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">TaskForm</span>;
+</code></pre>
+<p>actions.js</p>
+<pre><code class="language-js"><span class="hljs-comment">// fix params</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">createTaskCustom</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">prevState, formData</span>) =&gt; {
+  <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> <span class="hljs-built_in">setTimeout</span>(resolve, <span class="hljs-number">2000</span>));
+  <span class="hljs-keyword">const</span> content = formData.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;content&#x27;</span>);
+  <span class="hljs-comment">// some validation here</span>
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">create</span>({
+      <span class="hljs-attr">data</span>: {
+        content,
+      },
+    });
+    <span class="hljs-comment">// revalidate path</span>
+    <span class="hljs-title function_">revalidatePath</span>(<span class="hljs-string">&#x27;/tasks&#x27;</span>);
+    <span class="hljs-keyword">return</span> { <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;success!!!&#x27;</span> };
+  } <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-comment">// can&#x27;t return error</span>
+    <span class="hljs-keyword">return</span> { <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;error...&#x27;</span> };
+  }
+};
+</code></pre>
+<h2 id="extra---more-user-input-validation-options">Extra - More User Input Validation Options</h2>
+<ul>
+<li>required attribute a great start</li>
+<li>zod library</li>
+</ul>
+<p>The Zod library is a TypeScript-first schema declaration and validation library that allows developers to create complex type checks with simple syntax.</p>
+<p><a href="https://zod.dev/">Zod</a></p>
+<pre><code class="language-sh">npm install zod
+</code></pre>
+<p>actions.js</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> { z } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;zod&#x27;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">createTaskCustom</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">prevState, formData</span>) =&gt; {
+  <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> <span class="hljs-built_in">setTimeout</span>(resolve, <span class="hljs-number">2000</span>));
+  <span class="hljs-keyword">const</span> content = formData.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;content&#x27;</span>);
+
+  <span class="hljs-keyword">const</span> <span class="hljs-title class_">Task</span> = z.<span class="hljs-title function_">object</span>({
+    <span class="hljs-attr">content</span>: z.<span class="hljs-title function_">string</span>().<span class="hljs-title function_">min</span>(<span class="hljs-number">5</span>),
+  });
+
+  <span class="hljs-comment">// some validation here</span>
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-title class_">Task</span>.<span class="hljs-title function_">parse</span>({
+      content,
+    });
+    <span class="hljs-keyword">await</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">create</span>({
+      <span class="hljs-attr">data</span>: {
+        content,
+      },
+    });
+    <span class="hljs-comment">// revalidate path</span>
+    <span class="hljs-title function_">revalidatePath</span>(<span class="hljs-string">&#x27;/tasks&#x27;</span>);
+    <span class="hljs-keyword">return</span> { <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;success!!!&#x27;</span> };
+  } <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(error);
+    <span class="hljs-comment">// can&#x27;t return error</span>
+    <span class="hljs-keyword">return</span> { <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;error...&#x27;</span> };
+  }
+};
+</code></pre>
+<h2 id="providers">Providers</h2>
+<p><a href="https://react-hot-toast.com/">Beautiful Toasts</a></p>
+<pre><code class="language-sh">npm install react-hot-toast
+</code></pre>
+<ul>
+<li>create providers.js file in app</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-string">&#x27;use client&#x27;</span>;
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">Toaster</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-hot-toast&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">Providers</span> = (<span class="hljs-params">{ children }</span>) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Toaster</span> /&gt;</span>
+      {children}
+    <span class="hljs-tag">&lt;/&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Providers</span>;
+</code></pre>
+<p>layout.js</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Providers</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./providers&#x27;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">RootLayout</span>(<span class="hljs-params">{ children }</span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&#x27;en&#x27;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{inter.className}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Navbar</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;px-8 py-20 max-w-6xl mx-auto&#x27;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Providers</span>&gt;</span>{children}<span class="hljs-tag">&lt;/<span class="hljs-name">Providers</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<ul>
+<li>simplify createTaskCustom action</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">try</span> {
+  <span class="hljs-keyword">return</span> { <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;success&#x27;</span> };
+} <span class="hljs-keyword">catch</span> (error) {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(error);
+  <span class="hljs-keyword">return</span> { <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;error&#x27;</span> };
+}
+</code></pre>
+<ul>
+<li>add toast</li>
+</ul>
+<p>TaskFormCustom.jsx</p>
+<pre><code class="language-js"><span class="hljs-string">&#x27;use client&#x27;</span>;
+<span class="hljs-keyword">import</span> { createTaskCustom } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/actions&#x27;</span>;
+<span class="hljs-keyword">import</span> { useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
+
+<span class="hljs-keyword">import</span> { useFormStatus, useFormState } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-dom&#x27;</span>;
+<span class="hljs-keyword">import</span> toast <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-hot-toast&#x27;</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">SubmitBtn</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> { pending } = <span class="hljs-title function_">useFormStatus</span>();
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+      <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;submit&#x27;</span>
+      <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn btn-primary join-item&#x27;</span>
+      <span class="hljs-attr">disabled</span>=<span class="hljs-string">{pending}</span>
+    &gt;</span>
+      {pending ? &#x27;please wait...&#x27; : &#x27;create task&#x27;}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+  );
+};
+
+<span class="hljs-keyword">const</span> initialState = {
+  <span class="hljs-attr">message</span>: <span class="hljs-literal">null</span>,
+};
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">TaskForm</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> [state, formAction] = <span class="hljs-title function_">useFormState</span>(createTaskCustom, initialState);
+
+  <span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-keyword">if</span> (state.<span class="hljs-property">message</span> === <span class="hljs-string">&#x27;error&#x27;</span>) {
+      toast.<span class="hljs-title function_">error</span>(<span class="hljs-string">&#x27;there was an error&#x27;</span>);
+      <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">if</span> (state.<span class="hljs-property">message</span>) {
+      toast.<span class="hljs-title function_">success</span>(<span class="hljs-string">&#x27;task created....&#x27;</span>);
+    }
+  }, [state]);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">{formAction}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;join w-full&#x27;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+          <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;text &#x27;</span>
+          <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;input input-bordered join-item w-full&#x27;</span>
+          <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&#x27;type here&#x27;</span>
+          <span class="hljs-attr">name</span>=<span class="hljs-string">&#x27;content&#x27;</span>
+          <span class="hljs-attr">required</span>
+        /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">SubmitBtn</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">TaskForm</span>;
+</code></pre>
+<h2 id="challenge---add-functionality">Challenge - Add Functionality</h2>
+<p>DeleteForm.jsx</p>
+<pre><code class="language-js"><span class="hljs-string">&#x27;use client&#x27;</span>;
+<span class="hljs-keyword">import</span> { useFormStatus } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-dom&#x27;</span>;
+<span class="hljs-keyword">import</span> { deleteTask } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/actions&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">SubmitBtn</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> { pending } = <span class="hljs-title function_">useFormStatus</span>();
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;submit&#x27;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;btn btn-xs btn-error&#x27;</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">{pending}</span>&gt;</span>
+      {pending ? &#x27;pending...&#x27; : &#x27;delete&#x27;}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+  );
+};
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">DeleteForm</span> = (<span class="hljs-params">{ id }</span>) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">{deleteTask}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;hidden&#x27;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&#x27;id&#x27;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{id}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">SubmitBtn</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">DeleteForm</span>;
+</code></pre>
+<h2 id="route-handlers">Route Handlers</h2>
+<ul>
+<li>install Thunder Client</li>
+</ul>
+<p>Route Handlers allow you to create custom request handlers for a given route using the Web Request and Response APIs.</p>
+<ul>
+<li>in app create folder &quot;api&quot;</li>
+<li>in there create folder &quot;tasks&quot; with route.js file</li>
+</ul>
+<p>The following HTTP methods are supported: GET, POST, PUT, PATCH, DELETE, HEAD, and OPTIONS. If an unsupported method is called, Next.js will return a 405 Method Not Allowed response.</p>
+<p>In addition to supporting native Request and Response. Next.js extends them with NextRequest and NextResponse to provide convenient helpers for advanced use cases.</p>
+<p>app/api/tasks/route.js</p>
+<pre><code class="language-js"><span class="hljs-comment">// the following HTTP methods are supported: GET, POST, PUT, PATCH, DELETE, HEAD, and OPTIONS. If an unsupported method is called, Next.js will return a 405 Method Not Allowed response.</span>
+
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">NextResponse</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/server&#x27;</span>;
+<span class="hljs-keyword">import</span> db <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/db&#x27;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">GET</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">request</span>) =&gt; {
+  <span class="hljs-keyword">const</span> tasks = <span class="hljs-keyword">await</span> db.<span class="hljs-property">task</span>.<span class="hljs-title function_">findMany</span>();
+  <span class="hljs-keyword">return</span> <span class="hljs-title class_">Response</span>.<span class="hljs-title function_">json</span>({ <span class="hljs-attr">data</span>: tasks });
+  <span class="hljs-comment">// return NextResponse.json({ data: tasks });</span>
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">POST</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params">request</span>) =&gt; {
+  <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> request.<span class="hljs-title function_">json</span>();
+  <span class="hljs-keyword">const</span> task = <span class="hljs-keyword">await</span> db.<span class="hljs-property">task</span>.<span class="hljs-title function_">create</span>({
+    <span class="hljs-attr">data</span>: {
+      <span class="hljs-attr">content</span>: data.<span class="hljs-property">content</span>,
+    },
+  });
+  <span class="hljs-keyword">return</span> <span class="hljs-title class_">NextResponse</span>.<span class="hljs-title function_">json</span>({ <span class="hljs-attr">data</span>: task });
+};
+</code></pre>
+<h2 id="middleware">Middleware</h2>
+<p><a href="https://nextjs.org/docs/app/building-your-application/routing/middleware">Docs</a></p>
+<p>Middleware in Next.js is a piece of code that allows you to perform actions before a request is completed and modify the response accordingly.</p>
+<ul>
+<li>create middleware.js in the root</li>
+<li>by default will be invoked for every route in your project</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">middleware</span>(<span class="hljs-params">request</span>) {
+  <span class="hljs-keyword">return</span> <span class="hljs-title class_">Response</span>.<span class="hljs-title function_">json</span>({ <span class="hljs-attr">msg</span>: <span class="hljs-string">&#x27;hello there&#x27;</span> });
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> config = {
+  <span class="hljs-attr">matcher</span>: <span class="hljs-string">&#x27;/about&#x27;</span>,
+};
+</code></pre>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">NextResponse</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/server&#x27;</span>;
+
+<span class="hljs-comment">// This function can be marked `async` if using `await` inside</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">middleware</span>(<span class="hljs-params">request</span>) {
+  <span class="hljs-keyword">return</span> <span class="hljs-title class_">NextResponse</span>.<span class="hljs-title function_">redirect</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">URL</span>(<span class="hljs-string">&#x27;/&#x27;</span>, request.<span class="hljs-property">url</span>));
+}
+
+<span class="hljs-comment">// See &quot;Matching Paths&quot; below to learn more</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> config = {
+  <span class="hljs-attr">matcher</span>: [<span class="hljs-string">&#x27;/about/:path*&#x27;</span>, <span class="hljs-string">&#x27;/tasks/:path*&#x27;</span>],
+};
+</code></pre>
+<h2 id="planetscale">PlanetScale</h2>
+<p><a href="https://planetscale.com/">Host DB</a></p>
+<ul>
+<li>set DATABASE_URL in .env</li>
+</ul>
+<pre><code class="language-prisma">generator client {
+  provider = &quot;prisma-client-js&quot;
+}
+datasource db {
+  provider = &quot;mysql&quot;
+  url = env(&quot;DATABASE_URL&quot;)
+  relationMode = &quot;prisma&quot;
+}
+</code></pre>
+<pre><code class="language-sh">npx prisma db push
+</code></pre>
+<h3 id="local-build">Local Build</h3>
+<h3 id="setup-app">Setup App</h3>
+<p>package.json</p>
+<pre><code class="language-json"> <span class="hljs-attr">&quot;build&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;npx prisma generate &amp;&amp; next build&quot;</span><span class="hljs-punctuation">,</span>
+</code></pre>
+<ul>
+<li>prisma-example</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> prisma <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/utils/db&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">prismaHandlers</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;prisma example&#x27;</span>);
+  <span class="hljs-comment">// await prisma.task.create({</span>
+  <span class="hljs-comment">//   data: {</span>
+  <span class="hljs-comment">//     content: &#x27;wake up&#x27;,</span>
+  <span class="hljs-comment">//   },</span>
+  <span class="hljs-comment">// });</span>
+  <span class="hljs-keyword">return</span> prisma.<span class="hljs-property">task</span>.<span class="hljs-title function_">findMany</span>();
+};
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">PrismaExample</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">const</span> tasks = <span class="hljs-keyword">await</span> <span class="hljs-title function_">prismaHandlers</span>();
+  <span class="hljs-keyword">if</span> (tasks.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;mt-8 font-medium text-lg&#x27;</span>&gt;</span>No tasks to show...<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></span>;
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-7xl&#x27;</span>&gt;</span>PrismaExample<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      {tasks.map((task) =&gt; {
+        return (
+          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{task.id}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&#x27;text-xl py-2&#x27;</span>&gt;</span>
+            😬 {task.content}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        );
+      })}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">PrismaExample</span>;
+</code></pre>
+<ul>
+<li>clean out the DB</li>
+</ul>
+<pre><code class="language-sh">npm run build
+</code></pre>
+<pre><code class="language-sh">npm start
+</code></pre>
+<h2 id="force-dynamic">Force Dynamic</h2>
+<ul>
+<li>add loading.js to tasks</li>
+</ul>
+<p>tasks.js</p>
+<pre><code class="language-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> dynamic = <span class="hljs-string">&#x27;force-dynamic&#x27;</span>;
+</code></pre>
+<h2 id="deploy">Deploy</h2>
+<p><a href="https://vercel.com/">Vercel</a></p>
+<ul>
+<li>sign up for account</li>
+<li>create github repo</li>
+</ul>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>
