@@ -1,5 +1,4 @@
-import prisma from "@/utilities/db";
-import { revalidatePath } from "next/cache";
+import { createTask } from "@/utilities/action";
 
 export default function TaskForm() {
   return (
@@ -21,16 +20,3 @@ export default function TaskForm() {
 }
 
 //------------------------------
-async function createTask(formaData: FormData) {
-  "use server";
-  const content = formaData.get("content") as string;
-
-  // some validation if necessary
-
-  await prisma.task.create({
-    data: { content },
-  });
-
-  // revalidate path
-  revalidatePath("/tasks");
-}
