@@ -1,4 +1,3 @@
-import prisma from "@/utilities/db";
 import Link from "next/link";
 import { DeleteForm } from "@/components";
 import { getAllTasks } from "@/utilities/action";
