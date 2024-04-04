@@ -19,7 +19,7 @@ datasource db {
 }
 
 model Task {
-  id        String   @id @default(uuid())
+  taskId    String   @id @default(uuid())
   content   String
   createdAt DateTime @default(now())
   completed Boolean  @default(false)

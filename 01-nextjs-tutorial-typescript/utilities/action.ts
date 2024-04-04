@@ -13,7 +13,6 @@ export async function getAllTasks() {
 
 //-------------------
 export async function createTask(formaData: FormData) {
-  "use server";
   const content = formaData.get("content") as string;
 
   // some validation if necessary
