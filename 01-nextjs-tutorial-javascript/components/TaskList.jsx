@@ -13,7 +13,7 @@ export default async function TaskList() {
     <ul className="mt-8">
       {tasks.map((task) => (
         <li
-          key={task.id}
+          key={task.taskId}
           className="flex justify-between items-center px-6 py-4 mb-4 border border-base-300 rounded-lg shadow-lg"
         >
           <h2
@@ -24,10 +24,13 @@ export default async function TaskList() {
             {task.content}
           </h2>
           <div className="flex gap-6 items-center">
-            <Link href={`/tasks/${task.id}`} className="btn btn-accent btn-xs">
+            <Link
+              href={`/tasks/${task.taskId}`}
+              className="btn btn-accent btn-xs"
+            >
               edit
             </Link>
-            <DeleteForm id={task.id} />
+            <DeleteForm id={task.taskId} />
           </div>
         </li>
       ))}

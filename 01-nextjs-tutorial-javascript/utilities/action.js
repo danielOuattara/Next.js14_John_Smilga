@@ -14,10 +14,9 @@ export async function getAllTasks() {
 
 //-----------
 export async function createTask(formData) {
-  const content = formData.get("content");
   // some validation on content
   await prisma.task.create({
-    data: { content },
+    data: { content: formData.get("content") },
   });
   // revalidate path
   revalidatePath("/tasks");
