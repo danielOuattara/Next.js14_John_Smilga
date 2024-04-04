@@ -30,7 +30,7 @@ export default async function TaskList() {
             >
               edit
             </Link>
-            <DeleteForm id={task.taskId} />
+            <DeleteForm taskId={task.taskId} />
           </div>
         </li>
       ))}
