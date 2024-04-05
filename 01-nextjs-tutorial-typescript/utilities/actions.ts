@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import prisma from "./db";
 import { revalidatePath } from "next/cache";
+import { resolve } from "path";
 
 export async function getAllTasks() {
   return await prisma.task.findMany({
@@ -19,6 +20,17 @@ export async function createTask(formaData: FormData) {
     data: { content: formaData.get("content") as string },
   });
 
+  // revalidate path
+  revalidatePath("/tasks");
+}
+
+//-------------------
+export async function createTaskCustom(formaData: FormData) {
+  // some validation if necessary
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await prisma.task.create({
+    data: { content: formaData.get("content") as string },
+  });
   // revalidate path
   revalidatePath("/tasks");
 }
