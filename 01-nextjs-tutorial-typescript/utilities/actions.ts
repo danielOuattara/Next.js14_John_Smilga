@@ -1,5 +1,6 @@
 "use server";
 
+import { redirect } from "next/navigation";
 import prisma from "./db";
 import { revalidatePath } from "next/cache";
 
@@ -28,4 +29,24 @@ export async function deleteTask(formData: FormData) {
     where: { taskId: formData.get("taskId") as string },
   });
   revalidatePath("/tasks");
+}
+
+//-------------------
+export async function getTask(taskId: string) {
+  return await prisma.task.findUnique({ where: { taskId } });
+}
+
+//--------------------
+export async function editTask(formaData: FormData) {
+  await prisma.task.update({
+    where: {
+      taskId: formaData.get("taskId") as string,
+    },
+    data: {
+      content: formaData.get("content") as string,
+      completed: formaData.get("completed") === "on" ? true : false,
+    },
+  });
+
+  redirect("/tasks");
 }

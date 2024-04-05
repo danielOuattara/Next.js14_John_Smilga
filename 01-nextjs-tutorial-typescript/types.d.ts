@@ -55,3 +55,10 @@ interface IDrink {
 interface IFetchData {
   drinks: IDrink[];
 }
+
+export interface ITask {
+  taskId: string;
+  content: string;
+  createdAt: Date;
+  completed: boolean;
+}

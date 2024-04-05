@@ -1,4 +1,4 @@
-import { deleteTask } from "@/utilities/action";
+import { deleteTask } from "@/utilities/actions";
 
 type TypeDeleteFormProps = {
   taskId: string;
