@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { DeleteForm } from "@/components";
-import { getAllTasks } from "@/utilities/action";
+import { getAllTasks } from "@/utilities/actions";
 
 export default async function TaskList() {
   const tasks = await getAllTasks();

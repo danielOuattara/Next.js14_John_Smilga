@@ -2,6 +2,7 @@
 
 import prisma from "@/utilities/db";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 //----------
 export async function getAllTasks() {
@@ -27,3 +28,26 @@ export async function deleteTask(formData) {
   await prisma.task.delete({ where: { taskId: formData.get("taskId") } });
   revalidatePath("/tasks");
 }
+
+//----------
+export async function getTask(taskId) {
+  return await prisma.task.findUnique({ where: { taskId } });
+}
+
+//---------
+export async function editTask(formData) {
+  await prisma.task.update({
+    where: { taskId: formData.get("taskId") },
+    data: {
+      content: formData.get("content"),
+      completed: formData.get("completed") === "on" ? true : false,
+    },
+  });
+
+  redirect("/tasks");
+}
+
+/**
+ * redirect won't works unless the component has 'use client'.
+ * another option, setup the editTask in the component directly
+ */
