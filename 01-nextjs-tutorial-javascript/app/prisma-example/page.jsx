@@ -1,5 +1,5 @@
 import prisma from "@/utilities/db";
-
+import { revalidatePath } from "next/cache";
 //---
 
 export default async function PrismaExamplePage() {
@@ -30,6 +30,7 @@ async function prismaHandlers() {
       createdAt: "desc",
     },
   });
+  revalidatePath("/tasks");
 
   return allTasks;
 }

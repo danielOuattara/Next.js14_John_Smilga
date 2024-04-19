@@ -24,14 +24,19 @@ export async function createTask(formData) {
 }
 
 //-----------
-export async function createTaskCustom(formData) {
-  // some validation on content
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-  await prisma.task.create({
-    data: { content: formData.get("content") },
-  });
-  // revalidate path
-  revalidatePath("/tasks");
+export async function createTaskCustom(prevState, formData) {
+  // some validation on content here !
+  // await new Promise((resolve) => setTimeout(resolve, 2000));
+  try {
+    await prisma.task.create({
+      data: { content: formData.get("content") },
+    });
+    // revalidate path
+    revalidatePath("/tasks");
+    return { message: "Success" };
+  } catch (error) {
+    return { message: "Error" };
+  }
 }
 
 //----------
