@@ -3,6 +3,7 @@
 import prisma from "@/utilities/db";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { z, ZodError } from "zod";
 
 //----------
 export async function getAllTasks() {
@@ -27,15 +28,28 @@ export async function createTask(formData) {
 export async function createTaskCustom(prevState, formData) {
   // some validation on content here !
   // await new Promise((resolve) => setTimeout(resolve, 2000));
+  const taskSchema = z.object({
+    content: z.string().min(3),
+  });
+
+  const content = formData.get("content");
+
   try {
+    taskSchema.parse({ content });
+
     await prisma.task.create({
-      data: { content: formData.get("content") },
+      data: { content },
     });
     // revalidate path
     revalidatePath("/tasks");
     return { message: "Success" };
   } catch (error) {
-    return { message: "Error" };
+    // console.log("ERROR = ", error);
+
+    if (error instanceof ZodError) {
+      return { message: `Error: ${error.issues[0].message}` };
+    }
+    return { message: error.message };
   }
 }
 
