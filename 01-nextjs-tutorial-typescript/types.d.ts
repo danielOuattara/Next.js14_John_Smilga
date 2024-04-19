@@ -56,9 +56,13 @@ interface IFetchData {
   drinks: IDrink[];
 }
 
-export interface ITask {
+interface ITask {
   taskId: string;
   content: string;
   createdAt: Date;
   completed: boolean;
+}
+
+interface IInitialMessageState {
+  message: null | string;
 }

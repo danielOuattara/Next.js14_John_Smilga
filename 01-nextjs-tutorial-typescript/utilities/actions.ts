@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import prisma from "./db";
 import { revalidatePath } from "next/cache";
+// import { TypeInitialMessageState } from "@/types";
 
 export async function getAllTasks() {
   return await prisma.task.findMany({
@@ -24,14 +25,24 @@ export async function createTask(formaData: FormData) {
 }
 
 //-------------------
-export async function createTaskCustom(formaData: FormData) {
-  // some validation if necessary
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-  await prisma.task.create({
-    data: { content: formaData.get("content") as string },
-  });
-  // revalidate path
-  revalidatePath("/tasks");
+export async function createTaskCustom(
+  _prevState: IInitialMessageState,
+  formaData: FormData,
+) {
+  "use server";
+  // some validation if necessary here !
+  // await new Promise((resolve) => setTimeout(resolve, 2000));
+
+  try {
+    await prisma.task.create({
+      data: { content: formaData.get("content") as string },
+    });
+    // revalidate path
+    revalidatePath("/tasks");
+    return { message: "Success" };
+  } catch (error) {
+    return { message: "Error" };
+  }
 }
 
 //-------------------
