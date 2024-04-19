@@ -3,7 +3,6 @@
 import { redirect } from "next/navigation";
 import prisma from "./db";
 import { revalidatePath } from "next/cache";
-import { resolve } from "path";
 
 export async function getAllTasks() {
   return await prisma.task.findMany({

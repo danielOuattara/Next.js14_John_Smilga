@@ -16,7 +16,7 @@ export default function EditForm({ task }: TypeEditFormProps) {
     >
       <input type="hidden" name="taskId" value={task.taskId} />
 
-      {/* content */}
+      {/* task content */}
       <input
         type="text"
         required
@@ -25,19 +25,22 @@ export default function EditForm({ task }: TypeEditFormProps) {
         className="input input-bordered w-full"
       />
 
-      {/* completed */}
+      {/* task completed */}
       <div className="form-control my-4">
         <label className="label cursor-pointer">
           <span className="label-text">Completed</span>
           <input
             type="checkbox"
+            id="completed"
             defaultChecked={task.completed}
             name="completed"
             className="checkbox checkbox-primary checkbox-sm"
           />
         </label>
       </div>
-      <button className="btn btn-primary btn-block btn-sm">edit</button>
+      <button type="submit" className="btn btn-primary btn-block btn-sm">
+        edit
+      </button>
     </form>
   );
 }

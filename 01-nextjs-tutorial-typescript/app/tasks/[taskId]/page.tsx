@@ -20,11 +20,13 @@ export default async function TaskPage({ params }: TypeTaskPageProps) {
   }
 
   return (
-    <div className="mb-16">
-      <Link href={"/tasks"} className="btn btn-accent">
-        Back to tasks
-      </Link>
+    <>
+      <div className="mb-16">
+        <Link href={"/tasks"} className="btn btn-accent">
+          Back to tasks
+        </Link>
+      </div>
       <EditForm task={task!} />
-    </div>
+    </>
   );
 }

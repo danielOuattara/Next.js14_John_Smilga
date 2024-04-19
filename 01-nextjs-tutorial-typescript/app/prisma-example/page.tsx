@@ -28,6 +28,5 @@ async function prismaHandlers() {
       createdAt: "desc",
     },
   });
-
   return allTasks;
 }
