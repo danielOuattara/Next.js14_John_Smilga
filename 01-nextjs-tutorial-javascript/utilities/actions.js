@@ -57,8 +57,3 @@ export async function editTask(formData) {
 
   redirect("/tasks");
 }
-
-/**
- * redirect won't works unless the component has 'use client'.
- * another option, setup the editTask in the component directly
- */

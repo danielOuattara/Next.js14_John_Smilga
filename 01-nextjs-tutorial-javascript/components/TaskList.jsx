@@ -18,7 +18,7 @@ export default async function TaskList() {
         >
           <h2
             className={`text-lg capitalize ${
-              task.completed ? "line-through" : null
+              task.completed ? "line-through" : ""
             }`}
           >
             {task.content}
