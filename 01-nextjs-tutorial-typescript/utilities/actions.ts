@@ -3,7 +3,7 @@
 import { redirect } from "next/navigation";
 import prisma from "./db";
 import { revalidatePath } from "next/cache";
-// import { TypeInitialMessageState } from "@/types";
+import { z, ZodError } from "zod";
 
 export async function getAllTasks() {
   return await prisma.task.findMany({
@@ -29,11 +29,16 @@ export async function createTaskCustom(
   _prevState: IInitialMessageState,
   formaData: FormData,
 ) {
-  "use server";
   // some validation if necessary here !
   // await new Promise((resolve) => setTimeout(resolve, 2000));
 
+  const taskSchema = z.object({ content: z.string().min(3) });
+
+  const content = formaData.get("content");
+
   try {
+    taskSchema.parse({ content });
+
     await prisma.task.create({
       data: { content: formaData.get("content") as string },
     });
@@ -41,6 +46,9 @@ export async function createTaskCustom(
     revalidatePath("/tasks");
     return { message: "Success" };
   } catch (error) {
+    if (error instanceof ZodError) {
+      return { message: `Error: ${error.issues[0].message}` };
+    }
     return { message: "Error" };
   }
 }
