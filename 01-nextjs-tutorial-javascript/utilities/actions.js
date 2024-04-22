@@ -33,8 +33,6 @@ export async function createTaskCustom(prevState, formData) {
     content: z.string().min(3),
   });
 
-  console.log("formData = ", formData);
-
   const content = formData.get("content");
 
   try {
@@ -44,9 +42,6 @@ export async function createTaskCustom(prevState, formData) {
       data: { content },
     });
 
-    formData.forEach((_value, key) => {
-      formData.delete(key);
-    });
     // revalidate path
     revalidatePath("/tasks");
 
