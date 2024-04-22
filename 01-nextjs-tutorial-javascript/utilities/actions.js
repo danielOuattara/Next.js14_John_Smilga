@@ -44,12 +44,10 @@ export async function createTaskCustom(prevState, formData) {
     revalidatePath("/tasks");
     return { message: "Success" };
   } catch (error) {
-    // console.log("ERROR = ", error);
-
     if (error instanceof ZodError) {
       return { message: `Error: ${error.issues[0].message}` };
     }
-    return { message: error.message };
+    return { message: `Error: ${error.message}` };
   }
 }
 
