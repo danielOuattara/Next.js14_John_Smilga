@@ -1,23 +1,10 @@
 "use client";
 
-// import { TypeInitialMessageState } from "@/types";
 import { createTaskCustom } from "@/utilities/actions";
 import { useEffect } from "react";
-import { useFormStatus, useFormState } from "react-dom";
+import { useFormState } from "react-dom";
 import toast from "react-hot-toast";
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <button
-      type="submit"
-      className="btn join-item btn-primary"
-      disabled={pending}
-    >
-      {pending ? "Please wait ..." : "create task"}
-    </button>
-  );
-}
+import SubmitButton from "./SubmitButton";
 
 const initialState: IInitialMessageState = {
   message: "",
@@ -29,6 +16,8 @@ export default function TaskFormCustom() {
   useEffect(() => {
     if (state.message === "Success") {
       toast.success("Task Created");
+      const form = document.getElementById("form") as HTMLFormElement;
+      form.reset();
     }
     if (state.message.startsWith(`Error:`)) {
       toast.error(`ERROR`);
@@ -36,7 +25,7 @@ export default function TaskFormCustom() {
   }, [state]);
 
   return (
-    <form action={formAction}>
+    <form action={formAction} id="form">
       {/* form message */}
 
       {state.message && state.message.startsWith(`Error:`) ? (
@@ -52,9 +41,10 @@ export default function TaskFormCustom() {
           placeholder="Type Here"
           type="text"
           name="content"
+          id="content"
           required
         />
-        <SubmitButton />
+        <SubmitButton action={"create task"} style={"join-item btn-primary"} />
       </div>
     </form>
   );

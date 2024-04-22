@@ -42,6 +42,8 @@ export async function createTaskCustom(
     await prisma.task.create({
       data: { content: formaData.get("content") as string },
     });
+
+    formaData.delete("content");
     // revalidate path
     revalidatePath("/tasks");
     return { message: "Success" };
