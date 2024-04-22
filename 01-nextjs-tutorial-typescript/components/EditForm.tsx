@@ -1,7 +1,5 @@
 "use client";
 
-import { ITask } from "@/types";
-
 type TypeEditFormProps = {
   task: ITask;
 };

@@ -64,5 +64,5 @@ interface ITask {
 }
 
 interface IInitialMessageState {
-  message: null | string;
+  message: string;
 }
