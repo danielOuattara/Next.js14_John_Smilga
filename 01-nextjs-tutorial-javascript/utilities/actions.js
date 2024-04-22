@@ -26,11 +26,14 @@ export async function createTask(formData) {
 
 //-----------
 export async function createTaskCustom(prevState, formData) {
+  "use server";
   // some validation on content here !
   // await new Promise((resolve) => setTimeout(resolve, 2000));
   const taskSchema = z.object({
     content: z.string().min(3),
   });
+
+  console.log("formData = ", formData);
 
   const content = formData.get("content");
 
@@ -40,8 +43,13 @@ export async function createTaskCustom(prevState, formData) {
     await prisma.task.create({
       data: { content },
     });
+
+    formData.forEach((_value, key) => {
+      formData.delete(key);
+    });
     // revalidate path
     revalidatePath("/tasks");
+
     return { message: "Success" };
   } catch (error) {
     if (error instanceof ZodError) {

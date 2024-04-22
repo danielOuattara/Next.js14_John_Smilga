@@ -1,4 +1,3 @@
-// "use client";
 import { editTask } from "@/utilities/actions";
 
 export default function EditForm({ task }) {
