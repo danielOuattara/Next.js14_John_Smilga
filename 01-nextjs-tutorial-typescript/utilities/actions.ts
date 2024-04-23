@@ -29,16 +29,14 @@ export async function createTaskCustom(
   _prevState: IInitialMessageState,
   formaData: FormData,
 ) {
-  // some validation if necessary here !
-  // await new Promise((resolve) => setTimeout(resolve, 2000));
-
-  const taskSchema = z.object({ content: z.string().min(3) });
-
-  const content = formaData.get("content");
-
   try {
-    taskSchema.parse({ content });
+    // some validation if necessary here !
+    // await new Promise((resolve) => setTimeout(resolve, 2000));
 
+    const taskSchema = z.object({ content: z.string().min(3) });
+    const content = formaData.get("content");
+
+    taskSchema.parse({ content });
     await prisma.task.create({
       data: { content: formaData.get("content") as string },
     });
@@ -80,5 +78,6 @@ export async function editTask(formaData: FormData) {
     },
   });
 
+  revalidatePath("/tasks");
   redirect("/tasks");
 }
