@@ -75,5 +75,6 @@ export async function editTask(formData) {
     },
   });
 
+  revalidatePath("/tasks");
   redirect("/tasks");
 }
