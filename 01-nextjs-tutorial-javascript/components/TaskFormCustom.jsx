@@ -25,12 +25,12 @@ export default function TaskFormCustom() {
 
   useEffect(() => {
     if (state.message === "Success") {
-      toast.success("task created ");
+      toast.success("task created successfully !");
       const form = document.getElementById("form");
       form.reset();
     }
     if (state.message.startsWith(`Error:`)) {
-      toast.error(`ERROR`);
+      toast.error(`ERROR: ${state.message}`);
     }
   }, [state]);
   return (
