@@ -1845,7 +1845,7 @@ export default PrismaExample;
 - clean out the DB
 
 ```sh
-npm run build
+npx prisma generate && npm run build
 ```
 
 ```sh

@@ -41,10 +41,7 @@ export async function createTaskCustom(prevState, formData) {
     await prisma.task.create({
       data: { content },
     });
-
-    // revalidate path
     revalidatePath("/tasks");
-
     return { message: "Success" };
   } catch (error) {
     if (error instanceof ZodError) {
