@@ -8,13 +8,13 @@
 
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import toast from "react-hot-toast";
 import SubmitButton from "./SubmitButton";
 
-// import { createTaskCustom } from "@/utilities/actions";
-import { createTaskCustom } from "@/utilities/actions-route-handlers";
+import { createTaskCustom } from "@/utilities/actions";
+// import { createTaskCustom } from "@/utilities/actions-route-handlers";
 
 const initialState: IInitialMessageState = {
   message: "",
@@ -22,6 +22,18 @@ const initialState: IInitialMessageState = {
 
 export default function TaskFormCustom() {
   const [state, formAction] = useFormState(createTaskCustom, initialState);
+  const [showMessage, setShowMessage] = useState(false);
+
+  useEffect(() => {
+    if (state.message) {
+      setShowMessage(true); // Show message when state.message updates
+    }
+    const timer = setTimeout(() => {
+      setShowMessage(false); // Hide message after 2 seconds
+    }, 2000);
+
+    return () => clearTimeout(timer); // Cleanup the timeout
+  }, [state]);
 
   useEffect(() => {
     if (state.message === "Success") {
@@ -37,12 +49,13 @@ export default function TaskFormCustom() {
   return (
     <form action={formAction} id="form">
       {/* form message */}
-
-      {state.message && state.message.startsWith(`Error:`) ? (
+      {showMessage && state.message && state.message.startsWith(`Error:`) ? (
         <p className="mb-2 text-red-600">{state.message}</p>
-      ) : state.message ? (
+      ) : showMessage && state.message ? (
         <p className="mb-2 text-green-600">{state.message}</p>
-      ) : null}
+      ) : (
+        ""
+      )}
 
       {/* form input */}
       <div className="join w-full">
