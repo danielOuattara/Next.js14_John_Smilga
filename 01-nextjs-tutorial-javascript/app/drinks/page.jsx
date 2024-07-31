@@ -54,7 +54,7 @@ export default async function DrinkPage() {
 // const url = "https://www.thecocktaildb.com/api/json/v1/1/search.phpAAA?f=a";
 const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a";
 
-const fetchDrinks = async () => {
+export const fetchDrinks = async () => {
   const response = await fetch(url);
 
   /* --- throw error --- */

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import drinkImage from "./pexels-beverage.jpg";
 import Image from "next/image";
-
+import { fetchDrinks } from "../page";
 // console.log(drinkImage);
 
 export default async function SingleDrinkPage({ params }) {
@@ -42,3 +42,9 @@ const getSingleDrink = async (id) => {
   }
   return res.json();
 };
+
+// this function SSR to SSG for all request on single drink
+export async function generateStaticParams() {
+  const data = await fetchDrinks();
+  return data.drinks.map((drink) => ({ drinkId: drink.idDrink.toString() }));
+}
