@@ -63,6 +63,6 @@ const fetchDrinks = async (): Promise<IFetchData> => {
   /* --- throw error --- */
   if (!response.ok) throw new Error("Failed to fetch drinks...");
 
-  const data = await response.json();
+  const data: IFetchData = await response.json();
   return data;
 };

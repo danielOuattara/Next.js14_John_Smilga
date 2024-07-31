@@ -4,7 +4,7 @@ import { Task } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
-const baseUrl = `http://localhost:3000/api/tasks`;
+const baseUrl = `http://localhost:3001/api/tasks`;
 
 //----------
 export async function getAllTasks(): Promise<Task[]> {

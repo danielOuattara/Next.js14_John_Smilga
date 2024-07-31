@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Next.js Typescript",
   description:
-    "I this section tutorial John Smilga develops his Tutorial on Next.js",
+    "I this section tutorial from John Smilga, I develop his tutorial on Next Typescript",
 };
 
 type TypeRootLayoutProps = Readonly<{

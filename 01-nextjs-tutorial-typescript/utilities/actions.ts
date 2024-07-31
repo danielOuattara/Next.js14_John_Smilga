@@ -1,11 +1,12 @@
 "use server";
 
-import { redirect } from "next/navigation";
 import prisma from "./db";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { z, ZodError } from "zod";
 
-export async function getAllTasks() {
+//-------------------
+export async function getAllTasks(): Promise<ITask[]> {
   return await prisma.task.findMany({
     orderBy: {
       createdAt: "desc",
@@ -14,7 +15,7 @@ export async function getAllTasks() {
 }
 
 //-------------------
-export async function createTask(formaData: FormData) {
+export async function createTask(formaData: FormData): Promise<void> {
   // some validation if necessary
   await prisma.task.create({
     data: { content: formaData.get("content") as string },
@@ -54,7 +55,7 @@ export async function createTaskCustom(
 }
 
 //-------------------
-export async function deleteTask(formData: FormData) {
+export async function deleteTask(formData: FormData): Promise<void> {
   await prisma.task.delete({
     where: { taskId: formData.get("taskId") as string },
   });
@@ -62,12 +63,12 @@ export async function deleteTask(formData: FormData) {
 }
 
 //-------------------
-export async function getTask(taskId: string) {
+export async function getTask(taskId: string): Promise<ITask | null> {
   return await prisma.task.findUnique({ where: { taskId } });
 }
 
 //--------------------
-export async function editTask(formaData: FormData) {
+export async function editTask(formaData: FormData): Promise<void> {
   await prisma.task.update({
     where: {
       taskId: formaData.get("taskId") as string,

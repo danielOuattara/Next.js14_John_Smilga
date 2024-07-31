@@ -4,13 +4,13 @@ import { getTask } from "@/utilities/actions-route-handlers";
 
 import Link from "next/link";
 
-type TypeTaskPageProps = {
+type TypeProps = {
   params: {
     taskId: string;
   };
 };
 
-export default async function TaskPage({ params }: TypeTaskPageProps) {
+export default async function TaskPage({ params }: TypeProps) {
   const task = await getTask(params.taskId);
 
   if (!task) {

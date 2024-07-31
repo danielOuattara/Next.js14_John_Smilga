@@ -4,7 +4,7 @@ import Image from "next/image";
 
 // console.log(drinkImage);
 
-type TypeSingleDrinkPageProps = {
+type TSingleDrinkPageProps = {
   params: {
     drinkId: string;
   };
@@ -12,7 +12,7 @@ type TypeSingleDrinkPageProps = {
 
 export default async function SingleDrinkPage({
   params,
-}: TypeSingleDrinkPageProps) {
+}: TSingleDrinkPageProps) {
   const data = await getSingleDrink(params.drinkId);
   const title = data?.drinks[0]?.strDrink;
   const imgSrc = data?.drinks[0]?.strDrinkThumb;
@@ -21,8 +21,11 @@ export default async function SingleDrinkPage({
       <Link href="/drinks" className="btn btn-primary mt-8 mb-12">
         back to drinks
       </Link>
+
       {/* <img src={drinkImage.src} alt="beverage" /> */}
+
       {/* <Image src={drinkImage} alt="beverage" className="w-48 h-64 rounded-lg" /> */}
+
       <Image
         src={imgSrc}
         width={300}

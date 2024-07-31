@@ -1,7 +1,7 @@
 "use client";
 
-// import { editTask } from "@/utilities/actions";
-import { editTask } from "@/utilities/actions-route-handlers";
+import { editTask } from "@/utilities/actions";
+// import { editTask } from "@/utilities/actions-route-handlers";
 
 type TypeEditFormProps = {
   task: ITask;
@@ -11,7 +11,7 @@ export default function EditForm({ task }: TypeEditFormProps) {
   return (
     <form
       action={editTask}
-      className="max-w-sm bg-base-100 p-12 border border-base-300  rounded-lg"
+      className="max-w-sm bg-base-100 p-12 border border-base-300 rounded-lg"
     >
       <input type="hidden" name="taskId" value={task.taskId} />
 
