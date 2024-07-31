@@ -8,19 +8,19 @@
 - [x]  Nested Pages- 15:53
 - [x]  First Challenge - 17:46
 - [x]  CSS - 20:55
-- [x]  TailwindCSS (optional) - 23:23 
+- [x]  TailwindCSS (optional) - 23:23
 - [x]  DaisyUI (optional) - 32:55
 - [x]  Layout File - 42:46
 - [x]  Navbar Challenge - 46:49
 - [x]  Server Components vs Client Components - 56:26
-- [ ]  Data Fetching in Server Components - 1:06:12
-- [ ]  Loading and Error Components - 1:10:42
-- [ ]  Nested Layouts - 1:19:46
-- [ ]  Dynamic Routes - 1:22:50
-- [ ]  Single Drink Page- 1:31:14
-- [ ]  Image Component - 1:37:28
-- [ ]  More Routing - 1:53:12
-- [ ]  Prisma - 1:59:32
+- [x]  Data Fetching in Server Components - 1:06:12
+- [x]  Loading and Error Components - 1:10:42
+- [x]  Nested Layouts - 1:19:46
+- [x]  Dynamic Routes - 1:22:50
+- [x]  Single Drink Page- 1:31:14
+- [x]  Image Component - 1:37:28
+- [x]  More Routing - 1:53:12
+- [x]  Prisma - 1:59:32
 - [ ]  Display Tasks - 2:19:15
 - [ ]  Server Actions - 2:30:10
 - [ ]  Validation - 3:04:02

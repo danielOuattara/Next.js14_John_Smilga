@@ -1,7 +1,7 @@
 "use client";
 
-// import { deleteTask } from "@/utilities/actions";
-import { deleteTask } from "@/utilities/actions-route-handlers";
+import { deleteTask } from "@/utilities/actions";
+// import { deleteTask } from "@/utilities/actions-route-handlers";
 import SubmitButton from "./SubmitButton";
 
 export default function DeleteForm({ taskId }) {

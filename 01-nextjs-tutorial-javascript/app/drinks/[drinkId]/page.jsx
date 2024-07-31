@@ -13,8 +13,11 @@ export default async function SingleDrinkPage({ params }) {
       <Link href="/drinks" className="btn btn-primary mt-8 mb-12">
         back to drinks
       </Link>
+
       {/* <img src={drinkImage.src} alt="beverage" /> */}
+
       {/* <Image src={drinkImage} alt="beverage" className="w-48 h-64 rounded-lg" /> */}
+
       <Image
         src={imgSrc}
         width={300}
