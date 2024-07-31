@@ -1,5 +1,5 @@
 import Link from "next/link";
-import drinkImage from "./pexels-beverage.jpg";
+// import drinkImage from "./pexels-beverage.jpg";
 import Image from "next/image";
 
 // console.log(drinkImage);
@@ -49,3 +49,22 @@ const getSingleDrink = async (id: string): Promise<IFetchData> => {
   }
   return res.json();
 };
+
+const url_all_drinks =
+  "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a";
+
+const fetchDrinks = async (): Promise<IFetchData> => {
+  /** --- just for demo purposes --- */
+  const response = await fetch(url_all_drinks);
+  /* --- throw error --- */
+  if (!response.ok) throw new Error("Failed to fetch drinks...");
+
+  const data: IFetchData = await response.json();
+  return data;
+};
+
+// this function SSR to SSG for all request on single drink
+export async function generateStaticParams() {
+  const data = await fetchDrinks();
+  return data.drinks.map((drink) => ({ drinkId: drink.idDrink.toString() }));
+}

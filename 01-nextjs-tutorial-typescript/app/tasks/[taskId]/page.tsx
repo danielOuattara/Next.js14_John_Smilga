@@ -1,6 +1,6 @@
 import EditForm from "@/components/EditForm";
-// import { getTask } from "@/utilities/actions";
-import { getTask } from "@/utilities/actions-route-handlers";
+import { getTask, getAllTasks } from "@/utilities/actions";
+// import { getTask } from "@/utilities/actions-route-handlers";
 
 import Link from "next/link";
 
@@ -31,4 +31,10 @@ export default async function TaskPage({ params }: TypeProps) {
       <EditForm task={task!} />
     </>
   );
+}
+
+// this function SSR to SSG for all request on single task
+export async function generateStaticParams() {
+  const tasks = await getAllTasks();
+  return tasks.map((task) => ({ taskId: task.taskId.toString() }));
 }
