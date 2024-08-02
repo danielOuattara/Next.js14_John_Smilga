@@ -1,6 +1,6 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { LuShoppingCart } from "react-icons/lu";
-import Link from "next/link";
 
 export default function CartButton() {
   // temporary hard coded

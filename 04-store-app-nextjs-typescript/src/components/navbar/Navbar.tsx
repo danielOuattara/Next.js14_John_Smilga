@@ -1,5 +1,5 @@
 import { CartButton, DarkMode, LinksDropdown, Logo, NavSearch } from "./index";
-import { Container } from "../global/index";
+import { Container } from "@/components/global";
 
 export default function Navbar() {
   return (
