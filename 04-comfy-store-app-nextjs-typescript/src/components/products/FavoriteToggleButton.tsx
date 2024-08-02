@@ -1,3 +1,14 @@
-export default function FavoriteToggleButton() {
-  return <h2>FavoriteToggleButton</h2>;
+import { Button } from "../ui/button";
+import { FaHeart } from "react-icons/fa";
+
+type TypeProps = {
+  productId: string;
+};
+
+export default function FavoriteToggleButton({ productId }: TypeProps) {
+  return (
+    <Button size="icon" variant="outline" className="p-2 cursor-pointer">
+      <FaHeart />
+    </Button>
+  );
 }
