@@ -23,9 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Provider>
           <Navbar />
-          <Container className="border rounded border-fuchsia-400 my-2 py-20">
-            {children}
-          </Container>
+          <Container className="my-2 py-20">{children}</Container>
         </Provider>
       </body>
     </html>
