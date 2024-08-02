@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Container } from "@/components/global";
+import Provider from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,10 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        <Container className="border rounded border-fuchsia-400 my-2 py-20">
-          {children}
-        </Container>
+        <Provider>
+          <Navbar />
+          <Container className="border rounded border-fuchsia-400 my-2 py-20">
+            {children}
+          </Container>
+        </Provider>
       </body>
     </html>
   );
