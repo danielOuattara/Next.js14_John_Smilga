@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-
+import "./../utils/db-seed";
 export default function HomePage() {
   return (
     <>
