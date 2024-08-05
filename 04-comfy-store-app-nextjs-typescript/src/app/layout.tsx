@@ -3,14 +3,14 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Container } from "@/components/global";
-import Provider from "./provider";
+import Provider from "../components/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Next Store",
   description: `A nifty store built with Next.js. 
-  This app includes technologies like Next.js, Typscript, Shadcn/ui, TailwindCSS, Stripe `,
+  This app includes technologies like Next.js, TypeScript, Supabase, Postgres, Clerk(authentication), Shadcn/ui, TailwindCSS, Stripe `,
 };
 
 export default function RootLayout({
