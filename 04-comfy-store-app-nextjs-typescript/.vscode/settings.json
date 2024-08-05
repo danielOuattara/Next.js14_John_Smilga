@@ -1,0 +1,9 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#40243B",
+    "titleBar.activeBackground": "#5A3352",
+    "titleBar.activeForeground": "#FCF9FB"
+  },
+  "WillLuke.nextjs.addTypesOnSave": true,
+  "WillLuke.nextjs.hasPrompted": true
+}
