@@ -12,8 +12,18 @@ export async function fetchFeaturedProducts() {
 
 //-------------
 
-export async function fetchAllProducts() {
+type TypeProps = {
+  search: string;
+};
+
+export async function fetchAllProducts({ search = "" }: TypeProps) {
   return await prisma.product.findMany({
+    where: {
+      OR: [
+        { name: { contains: search, mode: "insensitive" } },
+        { company: { contains: search, mode: "insensitive" } },
+      ],
+    },
     orderBy: {
       createdAt: "desc",
     },

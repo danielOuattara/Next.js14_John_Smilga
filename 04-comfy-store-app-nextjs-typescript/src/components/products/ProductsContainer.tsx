@@ -12,7 +12,7 @@ type TypeProps = {
 };
 
 export default async function ProductsContainer({ layout, search }: TypeProps) {
-  const products = await fetchAllProducts();
+  const products = await fetchAllProducts({ search });
   const searchTerm = search ? `&search=${search}` : "";
 
   return (
