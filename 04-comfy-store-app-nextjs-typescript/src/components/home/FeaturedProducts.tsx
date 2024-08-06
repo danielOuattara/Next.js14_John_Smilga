@@ -1,6 +1,7 @@
 import { fetchFeaturedProducts } from "@/utils/actions";
-import { EmptyList, SectionTitle } from "../global";
-import { ProductsGrid } from "../products";
+import { EmptyList, LoadingContainer, SectionTitle } from "../global";
+import { Suspense } from "react";
+import FeaturedProductsLoader from "./FeaturedProductsLoader";
 
 export default async function FeaturedProducts() {
   await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -11,7 +12,9 @@ export default async function FeaturedProducts() {
   return (
     <section className="pt-24">
       <SectionTitle text="featured products" />
-      <ProductsGrid products={products} />
+      <Suspense fallback={<LoadingContainer />}>
+        <FeaturedProductsLoader />
+      </Suspense>
     </section>
   );
 }
