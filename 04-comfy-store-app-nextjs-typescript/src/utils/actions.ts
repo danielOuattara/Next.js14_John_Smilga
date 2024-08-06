@@ -12,7 +12,7 @@ export async function fetchFeaturedProducts() {
 
 //-------------
 
-export async function fetchFetAllProducts() {
+export async function fetchAllProducts() {
   return await prisma.product.findMany({
     orderBy: {
       createdAt: "desc",
