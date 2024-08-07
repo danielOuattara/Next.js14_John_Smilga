@@ -1,5 +1,5 @@
-import { LoadingContainer } from "@/components/global";
+import { LoadingProductsContainer } from "@/components/global";
 
 export default function loading() {
-  return <LoadingContainer />;
+  return <LoadingProductsContainer />;
 }
