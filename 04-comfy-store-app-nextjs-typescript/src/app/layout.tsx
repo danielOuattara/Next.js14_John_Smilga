@@ -4,6 +4,13 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Container } from "@/components/global";
 import Provider from "../components/providers";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,13 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Provider>
-          <Navbar />
-          <Container className="my-2 py-20">{children}</Container>
-        </Provider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <Provider>
+            <Navbar />
+            <Container className="my-2 py-20">{children}</Container>
+          </Provider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
