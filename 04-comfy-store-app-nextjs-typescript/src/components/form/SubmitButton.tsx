@@ -14,7 +14,7 @@ type TypeProps = {
   size?: btnSize;
 };
 
-export default function Buttons({
+export default function SubmitButton({
   className = "",
   text = "submit",
   size = "lg",
