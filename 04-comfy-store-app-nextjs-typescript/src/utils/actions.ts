@@ -1,4 +1,5 @@
 import prisma from "./prisma";
+import { redirect } from "next/navigation";
 
 //-------------
 
@@ -12,11 +13,7 @@ export async function fetchFeaturedProducts() {
 
 //-------------
 
-type TypeProps = {
-  search: string;
-};
-
-export async function fetchAllProducts({ search = "" }: TypeProps) {
+export async function fetchAllProducts({ search = "" }) {
   return await prisma.product.findMany({
     where: {
       OR: [
@@ -28,4 +25,18 @@ export async function fetchAllProducts({ search = "" }: TypeProps) {
       createdAt: "desc",
     },
   });
+}
+
+//-------------
+
+export async function fetchSingleProduct(productId: string) {
+  const product = await prisma.product.findUnique({
+    where: { id: productId },
+  });
+
+  if (!product) {
+    redirect("/products");
+  }
+
+  return product;
 }
