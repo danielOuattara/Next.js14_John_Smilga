@@ -8,8 +8,10 @@ export default async function UserIcon() {
     return (
       <Image
         src={user.imageUrl}
-        className="w-6 h-6 rounded-full object-cover"
+        className="w-7 h-7 rounded-full object-cover"
         alt={user.firstName || "user"}
+        width={100}
+        height={100}
       />
     );
   } else {

@@ -1,3 +1,5 @@
+"use client";
+
 import { SignOutButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { useToast } from "../ui/use-toast";
