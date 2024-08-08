@@ -1,19 +1,18 @@
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
+import { Prisma } from "@prisma/client";
+
+const name = Prisma.ProductScalarFieldEnum.price;
 
 type TypeProps = {
-  name: string;
   defaultValue?: number;
 };
 
-export default function PriceInput({
-  name = "price",
-  defaultValue,
-}: TypeProps) {
+export default function PriceInput({ defaultValue }: TypeProps) {
   return (
     <section className="mb-2">
-      <Label htmlFor="price" className="capitalize">
-        Price (€)
+      <Label htmlFor={name} className="capitalize">
+        Price (€) :
       </Label>
       <Input
         id={name}

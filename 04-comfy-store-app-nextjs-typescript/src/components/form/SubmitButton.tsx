@@ -1,3 +1,5 @@
+"use client";
+
 import { useFormStatus } from "react-dom";
 import { cn } from "@/lib/cn";
 import { ReloadIcon } from "@radix-ui/react-icons";

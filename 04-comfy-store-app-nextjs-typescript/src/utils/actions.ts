@@ -1,3 +1,5 @@
+"use server";
+
 import prisma from "./prisma";
 import { redirect } from "next/navigation";
 
@@ -40,3 +42,13 @@ export async function fetchSingleProduct(productId: string) {
 
   return product;
 }
+
+//----------
+
+export const createProductAction = async (
+  prevState: any,
+  formData: FormData,
+) => {
+  // const name = formData.get("name") as string;
+  return { message: "product created" };
+};
