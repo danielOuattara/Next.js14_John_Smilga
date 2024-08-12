@@ -26,3 +26,19 @@ export const productSchema = z.object({
   ),
   featured: z.coerce.boolean(),
 });
+
+//------------------------
+
+export function validateWithZodSchema<T>(
+  schema: ZodSchema<T>,
+  rawData: unknown,
+): T {
+  const result = schema.safeParse(rawData);
+
+  if (!result.success) {
+    const errors = result.error.errors.map((error) => `\n - ${error.message}`);
+    throw new Error(errors.join(", "));
+  }
+
+  return result.data;
+}

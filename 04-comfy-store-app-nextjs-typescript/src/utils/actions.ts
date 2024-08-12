@@ -3,7 +3,7 @@
 import { currentUser } from "@clerk/nextjs/server";
 import prisma from "./prisma";
 import { redirect } from "next/navigation";
-import { productSchema } from "./zod-schemas";
+import { productSchema, validateWithZodSchema } from "./zod-schemas";
 
 const getAuthUser = async () => {
   const user = await currentUser();
@@ -72,26 +72,15 @@ export const createProductAction = async (
     const user = await getAuthUser();
     //---
     const rawData = Object.fromEntries(formData);
-    const validatedFields = productSchema.safeParse(rawData);
+    const validatedFields = validateWithZodSchema(productSchema, rawData);
 
-    if (!validatedFields.success) {
-      const errors = validatedFields.error.errors.map(
-        (error) => `\n - ${error.message}`,
-      );
-      throw new Error("Error:\n" + errors.join("\n"));
-    }
-
-    // await prisma.product.create({
-    //   data: {
-    //     name,
-    //     company,
-    //     price,
-    //     image: "/images/product-1.jpg",
-    //     description,
-    //     featured,
-    //     clerkId: user.id,
-    //   },
-    // });
+    await prisma.product.create({
+      data: {
+        ...validatedFields,
+        image: "/images/product-1.jpg",
+        clerkId: user.id,
+      },
+    });
 
     return { message: "product created" };
   } catch (error) {
