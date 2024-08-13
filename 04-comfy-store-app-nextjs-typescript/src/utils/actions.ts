@@ -7,7 +7,7 @@ import {
   productSchema,
   validateAgainstZodSchema,
 } from "./zod-schemas";
-import { getAuthUser, renderError } from "./actions-utils";
+import { getAdminUser, getAuthUser, renderError } from "./actions-utils";
 import { uploadImage } from "./supabase";
 
 //-------------
@@ -107,3 +107,14 @@ export const createProductAction = async (
 //     return renderError(error);
 //   }
 // };
+
+//----
+export const fetchAdminProducts = async () => {
+  await getAdminUser();
+  const products = await prisma.product.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+  return products;
+};
