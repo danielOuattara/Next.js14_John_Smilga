@@ -1,6 +1,5 @@
 "use server";
 
-import { currentUser } from "@clerk/nextjs/server";
 import prisma from "./prisma";
 import { redirect } from "next/navigation";
 import {
@@ -9,6 +8,7 @@ import {
   validateAgainstZodSchema,
 } from "./zod-schemas";
 import { getAuthUser, renderError } from "./actions-utils";
+import { uploadImage } from "./supabase";
 
 //-------------
 
@@ -67,20 +67,22 @@ export const createProductAction = async (
       image: file,
     });
 
-    console.log(validatedFileImage);
+    const imagePath = await uploadImage(validatedFileImage.image);
 
     await prisma.product.create({
       data: {
         ...validatedFields,
-        image: "/images/product-1.jpg",
+        image: imagePath,
         clerkId: user.id,
       },
     });
 
-    return { message: "product created" };
+    // return { message: "product created" };
   } catch (error) {
     return renderError(error);
   }
+
+  redirect("/admin/products");
 };
 
 //--------------

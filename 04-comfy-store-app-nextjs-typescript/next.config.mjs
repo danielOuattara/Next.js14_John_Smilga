@@ -7,6 +7,10 @@ const nextConfig = {
         hostname: "images.pexels.com",
       },
       { protocol: "https", hostname: "img.clerk.com" },
+      {
+        protocol: "https",
+        hostname: "lrbhmxkmuojraafreonu.supabase.co",
+      },
     ],
   },
 };
