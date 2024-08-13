@@ -1,5 +1,6 @@
 import { z, ZodSchema } from "zod";
 
+//----
 export const productSchema = z.object({
   name: z
     .string()
@@ -27,9 +28,36 @@ export const productSchema = z.object({
   featured: z.coerce.boolean(),
 });
 
-//------------------------
+//----
+function validateImageFile() {
+  const maxUploadSize = 1024 * 1024;
+  const acceptedFileTypes = [
+    "image/jpeg",
+    "image/png",
+    "image/gif",
+    "image/jpg",
+  ];
 
-export function validateWithZodSchema<T>(
+  return z
+    .instanceof(File)
+    .refine((file) => {
+      return (
+        file && acceptedFileTypes.some((type) => file.type.startsWith(type))
+      );
+    }, "File must be an image")
+
+    .refine((file) => {
+      return file.size <= maxUploadSize;
+    }, `File size must be less than 1 MB`);
+}
+
+//-----
+export const imageSchema = z.object({
+  image: validateImageFile(),
+});
+
+//----
+export function validateAgainstZodSchema<T>(
   schema: ZodSchema<T>,
   rawData: unknown,
 ): T {

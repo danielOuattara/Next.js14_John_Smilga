@@ -3,24 +3,12 @@
 import { currentUser } from "@clerk/nextjs/server";
 import prisma from "./prisma";
 import { redirect } from "next/navigation";
-import { productSchema, validateWithZodSchema } from "./zod-schemas";
-
-const getAuthUser = async () => {
-  const user = await currentUser();
-  if (!user) {
-    throw new Error("You must be logged in to access this route");
-  }
-  return user;
-};
-
-//-------------
-
-const renderError = (error: unknown): { message: string } => {
-  console.log(error);
-  return {
-    message: error instanceof Error ? error.message : "An error occurred",
-  };
-};
+import {
+  imageSchema,
+  productSchema,
+  validateAgainstZodSchema,
+} from "./zod-schemas";
+import { getAuthUser, renderError } from "./actions-utils";
 
 //-------------
 
@@ -72,7 +60,14 @@ export const createProductAction = async (
     const user = await getAuthUser();
     //---
     const rawData = Object.fromEntries(formData);
-    const validatedFields = validateWithZodSchema(productSchema, rawData);
+    const validatedFields = validateAgainstZodSchema(productSchema, rawData);
+
+    const file = formData.get("image") as File;
+    const validatedFileImage = validateAgainstZodSchema(imageSchema, {
+      image: file,
+    });
+
+    console.log(validatedFileImage);
 
     await prisma.product.create({
       data: {
