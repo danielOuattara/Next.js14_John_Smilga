@@ -8,7 +8,7 @@ import {
   validateAgainstZodSchema,
 } from "./zod-schemas";
 import { getAdminUser, getAuthUser, renderError } from "./actions-utils";
-import { uploadImage } from "./supabase";
+import { deleteImageInBucket, uploadImage } from "./supabase";
 import { revalidatePath } from "next/cache";
 
 //-------------
@@ -121,12 +121,13 @@ export const fetchAdminProducts = async () => {
 export const deleteProduct = async (productId: string) => {
   await getAdminUser();
   try {
-    await prisma.product.delete({
+    const product = await prisma.product.delete({
       where: {
         id: productId,
       },
     });
 
+    await deleteImageInBucket(product.image);
     revalidatePath("/admin/products");
     return { message: "product removed" };
   } catch (error) {
