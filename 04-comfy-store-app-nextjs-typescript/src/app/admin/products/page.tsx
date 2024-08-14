@@ -1,4 +1,4 @@
-import { fetchAdminProducts } from "@/utils/actions";
+import { deleteProduct, fetchAdminProducts } from "@/utils/actions";
 import EmptyList from "@/components/global/EmptyList";
 import Link from "next/link";
 import {
@@ -11,6 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { formatCurrency } from "@/utils/formatCurrency";
+import { FormContainer, IconActionButton } from "@/components/form";
 
 export default async function AdminProductPage() {
   const products = await fetchAdminProducts();
@@ -44,7 +45,14 @@ export default async function AdminProductPage() {
               <TableCell>{product.company}</TableCell>
               <TableCell>{formatCurrency(product.price)}</TableCell>
 
-              <TableCell className="flex items-center gap-x-2"></TableCell>
+              <TableCell className="flex items-center gap-x-2">
+                <Link href={`/admin/products/${product.id}/edit`}>
+                  <IconActionButton actionType={"edit"} />
+                </Link>
+                <FormContainer action={deleteProduct.bind(null, product.id)}>
+                  <IconActionButton actionType={"delete"} />
+                </FormContainer>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

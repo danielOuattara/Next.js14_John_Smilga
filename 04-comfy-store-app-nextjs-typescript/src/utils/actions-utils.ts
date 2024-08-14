@@ -2,7 +2,6 @@ import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
 //-------------
-
 export const getAuthUser = async () => {
   const user = await currentUser();
   if (!user) {
@@ -12,7 +11,6 @@ export const getAuthUser = async () => {
 };
 
 //----------
-
 export const renderError = (error: unknown): { message: string } => {
   console.log(error);
   return {
@@ -21,7 +19,6 @@ export const renderError = (error: unknown): { message: string } => {
 };
 
 // ----------
-
 export const getAdminUser = async () => {
   const user = await getAuthUser();
   if (user.id !== process.env.ADMIN_USER_ID) {

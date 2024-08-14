@@ -9,9 +9,9 @@ import {
 } from "./zod-schemas";
 import { getAdminUser, getAuthUser, renderError } from "./actions-utils";
 import { uploadImage } from "./supabase";
+import { revalidatePath } from "next/cache";
 
 //-------------
-
 export async function fetchFeaturedProducts() {
   return await prisma.product.findMany({
     where: {
@@ -21,7 +21,6 @@ export async function fetchFeaturedProducts() {
 }
 
 //-------------
-
 export async function fetchAllProducts({ search = "" }) {
   return await prisma.product.findMany({
     where: {
@@ -37,7 +36,6 @@ export async function fetchAllProducts({ search = "" }) {
 }
 
 //-------------
-
 export async function fetchSingleProduct(productId: string) {
   const product = await prisma.product.findUnique({
     where: { id: productId },
@@ -108,7 +106,7 @@ export const createProductAction = async (
 //   }
 // };
 
-//----
+//-------
 export const fetchAdminProducts = async () => {
   await getAdminUser();
   const products = await prisma.product.findMany({
@@ -118,3 +116,29 @@ export const fetchAdminProducts = async () => {
   });
   return products;
 };
+
+//-------
+export const deleteProduct = async (productId: string) => {
+  await getAdminUser();
+  try {
+    await prisma.product.delete({
+      where: {
+        id: productId,
+      },
+    });
+
+    revalidatePath("/admin/products");
+    return { message: "product removed" };
+  } catch (error) {
+    return renderError(error);
+  }
+};
+
+//-------
+export const editProductAction = async () => {};
+
+{
+  /* <FormContainer action={editProduct}>
+
+                </FormContainer> */
+}

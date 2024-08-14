@@ -1,4 +1,4 @@
-export { default as SubmitButton } from "./SubmitButton";
+export { SubmitButton, IconActionButton } from "./Buttons";
 export { default as CheckboxInput } from "./CheckboxInput";
 export { default as FormContainer } from "./FormContainer";
 export { default as FormInput } from "./FormInput";
