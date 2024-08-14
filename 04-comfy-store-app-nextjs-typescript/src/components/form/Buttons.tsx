@@ -65,11 +65,3 @@ export const IconActionButton = ({ actionType }: TypeAction) => {
     </Button>
   );
 };
-
-// export function DeleteProduct() {
-//   return (
-//     <FormContainer action={editProduct}>
-//       <IconActionButton actionType={"edit"} productId={product.id} />
-//     </FormContainer>
-//   );
-// }

@@ -99,9 +99,6 @@ export const deleteProduct = async (productId: string) => {
 };
 
 //-------
-export const editProductAction = async () => {};
-
-//-------
 export const fetchAdminProductsDetails = async (productId: string) => {
   await getAdminUser();
   const product = await prisma.product.findUnique({
@@ -120,7 +117,22 @@ export const fetchAdminProductsDetails = async (productId: string) => {
 //-------
 export const updateProduct = async (prevState: any, formData: FormData) => {
   try {
-    return { message: "Product updated successfully" };
+    await getAdminUser();
+    //---
+    const productId = formData.get("id") as string;
+    const rawData = Object.fromEntries(formData);
+    const validatedFields = validateAgainstZodSchema(productSchema, rawData);
+    await prisma.product.update({
+      where: {
+        id: productId,
+      },
+      data: {
+        ...validatedFields,
+      },
+    });
+
+    revalidatePath(`/admin/products/${productId}/edit`);
+    return { message: "Product Image updated successfully" };
   } catch (error) {
     return renderError(error);
   }
@@ -132,9 +144,8 @@ export const updateProductImage = async (
   formData: FormData,
 ) => {
   try {
-    return { message: "Product Image updated successfully" };
+    return { message: "Product updated successfully" };
   } catch (error) {
     return renderError(error);
   }
 };
-//-------

@@ -8,11 +8,11 @@ import { fetchSingleProduct } from "@/utils/actions-public";
 import { formatCurrency } from "@/utils/formatCurrency";
 import Image from "next/image";
 
-export default async function SingleProductPage({
-  params,
-}: {
+type TypeProps = {
   params: { productId: string };
-}) {
+};
+
+export default async function SingleProductPage({ params }: TypeProps) {
   const product = await fetchSingleProduct(params.productId);
 
   return (

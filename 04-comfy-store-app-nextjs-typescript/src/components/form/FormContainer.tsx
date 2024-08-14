@@ -15,9 +15,7 @@ type TypeProps = {
 
 export default function FormContainer({ action, children }: TypeProps) {
   const [state, formAction] = useFormState(action, initialState);
-
   const { toast } = useToast();
-
   useEffect(() => {
     if (state.message) {
       toast({ description: state.message });
