@@ -11,43 +11,6 @@ import { getAdminUser, getAuthUser, renderError } from "./actions-utils";
 import { deleteImageInBucket, uploadImage } from "./supabase";
 import { revalidatePath } from "next/cache";
 
-//-------------
-export async function fetchFeaturedProducts() {
-  return await prisma.product.findMany({
-    where: {
-      featured: true,
-    },
-  });
-}
-
-//-------------
-export async function fetchAllProducts({ search = "" }) {
-  return await prisma.product.findMany({
-    where: {
-      OR: [
-        { name: { contains: search, mode: "insensitive" } },
-        { company: { contains: search, mode: "insensitive" } },
-      ],
-    },
-    orderBy: {
-      createdAt: "desc",
-    },
-  });
-}
-
-//-------------
-export async function fetchSingleProduct(productId: string) {
-  const product = await prisma.product.findUnique({
-    where: { id: productId },
-  });
-
-  if (!product) {
-    redirect("/products");
-  }
-
-  return product;
-}
-
 // ---------
 // using Zod
 export const createProductAction = async (
@@ -138,8 +101,40 @@ export const deleteProduct = async (productId: string) => {
 //-------
 export const editProductAction = async () => {};
 
-{
-  /* <FormContainer action={editProduct}>
+//-------
+export const fetchAdminProductsDetails = async (productId: string) => {
+  await getAdminUser();
+  const product = await prisma.product.findUnique({
+    where: {
+      id: productId,
+    },
+  });
 
-                </FormContainer> */
-}
+  if (!product) {
+    redirect("/admin/products");
+  }
+
+  return product;
+};
+
+//-------
+export const updateProduct = async (prevState: any, formData: FormData) => {
+  try {
+    return { message: "Product updated successfully" };
+  } catch (error) {
+    return renderError(error);
+  }
+};
+
+//-------
+export const updateProductImage = async (
+  prevState: any,
+  formData: FormData,
+) => {
+  try {
+    return { message: "Product Image updated successfully" };
+  } catch (error) {
+    return renderError(error);
+  }
+};
+//-------

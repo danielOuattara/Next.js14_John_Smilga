@@ -8,7 +8,7 @@ import {
   SubmitButton,
   TextAreaInput,
 } from "@/components/form";
-import { createProductAction } from "@/utils/actions";
+import { createProductAction } from "@/utils/actions-admin";
 
 export default function CreateProductPage() {
   const name = faker.commerce.productName();

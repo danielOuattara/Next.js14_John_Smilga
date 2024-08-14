@@ -4,7 +4,7 @@ import {
   BreadCrumbs,
   ProductRating,
 } from "@/components/single-product";
-import { fetchSingleProduct } from "@/utils/actions";
+import { fetchSingleProduct } from "@/utils/actions-public";
 import { formatCurrency } from "@/utils/formatCurrency";
 import Image from "next/image";
 

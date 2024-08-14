@@ -1,4 +1,4 @@
-import { fetchFeaturedProducts } from "@/utils/actions";
+import { fetchFeaturedProducts } from "@/utils/actions-public";
 import { ProductsGrid } from "../products";
 import { EmptyList } from "../global";
 

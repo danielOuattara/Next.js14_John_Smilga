@@ -1,4 +1,3 @@
-import { deleteProduct, fetchAdminProducts } from "@/utils/actions";
 import EmptyList from "@/components/global/EmptyList";
 import Link from "next/link";
 import {
@@ -12,6 +11,7 @@ import {
 } from "@/components/ui/table";
 import { formatCurrency } from "@/utils/formatCurrency";
 import { FormContainer, IconActionButton } from "@/components/form";
+import { deleteProduct, fetchAdminProducts } from "@/utils/actions-admin";
 
 export default async function AdminProductPage() {
   const products = await fetchAdminProducts();
