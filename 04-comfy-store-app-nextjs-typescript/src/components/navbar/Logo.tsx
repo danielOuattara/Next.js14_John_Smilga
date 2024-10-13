@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { LuArmchair } from "react-icons/lu";
-import { VscCode } from "react-icons/vsc";
+import { GiFlexibleStar } from "react-icons/gi";
 
 export default function Logo() {
   return (
-    <Button size="icon" asChild>
+    <Button size="default" asChild>
       <Link href="/">
-        <VscCode className="w-6 h-6" />
+        <GiFlexibleStar className="w-10 h-10" />
       </Link>
     </Button>
   );
