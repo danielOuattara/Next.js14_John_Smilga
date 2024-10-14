@@ -60,7 +60,7 @@ export default AboutPage;
 - setup Shadcn/ui to our project
 
 ```sh
-npx shadcn-ui@latest init
+npx shadcn@latest init
 
 ```
 
@@ -71,7 +71,7 @@ npx shadcn-ui@latest init
 - test the Shadcn/ui Button component
 
 ```sh
-npx shadcn-ui@latest add button
+npx shadcn@latest add button
 ```
 
 ```tsx
@@ -93,7 +93,7 @@ export default HomePage;
 - install most the shadcn/ui components needed
 
 ```sh
-npx shadcn-ui@latest add breadcrumb card checkbox dropdown-menu input label popover select separator table textarea toast skeleton carousel
+npx shadcn@latest add breadcrumb card checkbox dropdown-menu input label popover select separator table textarea toast skeleton carousel
 ```
 
 - create folders in root components/
