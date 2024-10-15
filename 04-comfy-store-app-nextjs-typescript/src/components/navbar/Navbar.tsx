@@ -1,5 +1,11 @@
 import Container from "../global/Container";
-import { CartButton, DarkMode, LinksDropdown, Logo, NavSearch } from "./index";
+import {
+  CartButton,
+  ToggleTheme,
+  LinksDropdown,
+  Logo,
+  NavSearch,
+} from "./index";
 
 export default function Navbar() {
   return (
@@ -9,7 +15,7 @@ export default function Navbar() {
         <NavSearch />
         <div className="flex gap-4 items-center">
           <CartButton />
-          <DarkMode />
+          <ToggleTheme />
           <LinksDropdown />
         </div>
       </Container>

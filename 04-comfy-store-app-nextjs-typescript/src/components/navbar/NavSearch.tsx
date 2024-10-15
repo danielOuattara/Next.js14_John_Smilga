@@ -4,8 +4,8 @@ export default function NavSearch() {
   return (
     <Input
       type="search"
-      placeholder="search product"
-      className="max-w-xs dark:bg-muted "
+      placeholder="search for a product"
+      className="max-w-xs bg-muted "
     />
   );
 }
