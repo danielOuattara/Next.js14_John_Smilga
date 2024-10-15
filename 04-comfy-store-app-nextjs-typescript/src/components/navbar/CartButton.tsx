@@ -1,3 +1,3 @@
-export default function Cartbutton() {
-  return <h1 className="text-4xl">Cartbutton Page</h1>;
+export default function CartButton() {
+  return <h1 className="text-xl">Cartbutton Page</h1>;
 }

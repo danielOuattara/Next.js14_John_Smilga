@@ -1,3 +1,3 @@
-export default function Usericon() { 
-  return <h1 className="text-4xl">Usericon Page</h1>; 
+export default function UserIcon() {
+  return <h1 className="text-xl">Usericon Page</h1>;
 }

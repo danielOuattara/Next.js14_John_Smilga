@@ -1,3 +1,3 @@
-export default function Darkmode() { 
-  return <h1 className="text-4xl">Darkmode Page</h1>; 
+export default function DarkMode() {
+  return <h1 className="text-xl">Darkmode Page</h1>;
 }

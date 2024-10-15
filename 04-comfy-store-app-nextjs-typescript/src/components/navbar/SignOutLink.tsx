@@ -1,3 +1,3 @@
-export default function Signoutlink() { 
-  return <h1 className="text-4xl">Signoutlink Page</h1>; 
+export default function SignOutLink() {
+  return <h4 className="text-xl">Signoutlink Page</h4>;
 }

@@ -1,3 +1,3 @@
-export default function Navsearch() { 
-  return <h1 className="text-4xl">Navsearch Page</h1>; 
+export default function NavSearch() {
+  return <h4 className="text-xl">Navsearch Page</h4>;
 }

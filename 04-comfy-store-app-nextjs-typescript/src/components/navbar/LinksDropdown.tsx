@@ -1,3 +1,3 @@
-export default function Linksdropdown() { 
-  return <h1 className="text-4xl">Linksdropdown Page</h1>; 
+export default function LinksDropdown() {
+  return <h4 className="text-xl">LinksDropdown Page</h4>;
 }

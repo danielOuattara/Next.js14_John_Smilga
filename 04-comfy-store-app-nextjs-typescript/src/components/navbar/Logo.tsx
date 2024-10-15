@@ -1,3 +1,3 @@
-export default function Logo() { 
-  return <h1 className="text-4xl">Logo Page</h1>; 
+export default function Logo() {
+  return <h4 className="text-xl">Logo Page</h4>;
 }
