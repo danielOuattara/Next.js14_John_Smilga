@@ -96,7 +96,7 @@ export default HomePage;
 npx shadcn@latest add breadcrumb card checkbox dropdown-menu input label popover select separator table textarea toast skeleton carousel
 ```
 
-- create folders in root components/
+- create folders in root src/components/
   - ui/
   - cart/
   - form/
@@ -106,11 +106,13 @@ npx shadcn@latest add breadcrumb card checkbox dropdown-menu input label popover
   - products/
   - single-product/
 
+```sh
+mkdir {cart,form,global,home,navbar,products,single-product}
+```
+
 ## Navbar - Setup
 
-- create
-
-- navbar/
+- create in navbar/
   - CartButton
   - DarkMode
   - LinksDropdown
@@ -119,6 +121,33 @@ npx shadcn@latest add breadcrumb card checkbox dropdown-menu input label popover
   - NavSearch
   - SignOutLink
   - UserIcon
+
+```sh
+
+cd src/components/navbar && \
+touch {CartButton,DarkMode,LinksDropdown,Logo,Navbar,NavSearch,SignOutLink,UserIcon,index}.tsx && \
+for file in *.tsx; do \
+  base_name=$(basename "$file" .tsx); \
+  capitalized_name=$(echo "$base_name" | awk '{print toupper(substr($0,1,1)) tolower(substr($0,2))}'); \
+  echo "export default function $capitalized_name() { 
+  return <h1 className=\"text-4xl\">$capitalized_name Page</h1>; 
+}" > "$file"; \
+done
+```
+
+- update `index.tsx` as follow:
+
+```tsx
+export { default as CartButton } from "./CartButton";
+export { default as DarkMode } from "./DarkMode";
+export { default as LinksDropdown } from "./LinksDropdown";
+export { default as Logo } from "./Logo";
+export { default as Navbar } from "./Navbar";
+export { default as NavSearch } from "./NavSearch";
+export { default as SignOutLink } from "./SignOutLink";
+export { default as UserIcon } from "./UserIcon";
+
+```
 
 ## Container Component
 
