@@ -725,39 +725,39 @@ npm run dev
 ```json
 [
   {
-    "name": "avant-garde lamp",
-    "company": "Modenza",
-    "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
+    "name": "heaven lamps",
+    "company": "Grenoble",
+    "description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Praesent proin interdum laoreet iaculis malesuada, aliquam tincidunt lacus. Maecenas nascetur donec volutpat volutpat egestas. Rutrum cubilia magnis interdum commodo accumsan volutpat torquent. Fermentum pulvinar sodales nisi eros adipiscing. Fringilla senectus ornare nascetur adipiscing libero, integer pulvinar volutpat. Molestie aenean interdum elit potenti, suscipit ridiculus.",
     "featured": true,
-    "image": "https://images.pexels.com/photos/943150/pexels-photo-943150.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 100,
+    "image": "https://images.pexels.com/photos/37869/lamps-light-lampshade-screen-37869.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "price": 127,
     "clerkId": "clerkId"
   },
   {
-    "name": "chic chair",
-    "company": "Luxora",
-    "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
+    "name": "chaise de campagne",
+    "company": "Maison des champs",
+    "description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Praesent proin interdum laoreet iaculis malesuada, aliquam tincidunt lacus. Maecenas nascetur donec volutpat volutpat egestas. Rutrum cubilia magnis interdum commodo accumsan volutpat torquent. Fermentum pulvinar sodales nisi eros adipiscing. Fringilla senectus ornare nascetur adipiscing libero, integer pulvinar volutpat. Molestie aenean interdum elit potenti, suscipit ridiculus.",
     "featured": true,
-    "image": "https://images.pexels.com/photos/5705090/pexels-photo-5705090.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 200,
+    "image": "https://images.pexels.com/photos/3705539/pexels-photo-3705539.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "price": 280,
     "clerkId": "clerkId"
   },
   {
-    "name": "comfy bed",
-    "company": "Homestead",
-    "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
+    "name": "honey bed",
+    "company": "Lune de miel",
+    "description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Praesent proin interdum laoreet iaculis malesuada, aliquam tincidunt lacus. Maecenas nascetur donec volutpat volutpat egestas. Rutrum cubilia magnis interdum commodo accumsan volutpat torquent. Fermentum pulvinar sodales nisi eros adipiscing. Fringilla senectus ornare nascetur adipiscing libero, integer pulvinar volutpat. Molestie aenean interdum elit potenti, suscipit ridiculus.",
     "featured": true,
-    "image": "https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 300,
+    "image": "https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 990,
     "clerkId": "clerkId"
   },
   {
-    "name": "contemporary sofa",
-    "company": "Comfora",
-    "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
+    "name": "softy sofa",
+    "company": "Terre douce",
+    "description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Praesent proin interdum laoreet iaculis malesuada, aliquam tincidunt lacus. Maecenas nascetur donec volutpat volutpat egestas. Rutrum cubilia magnis interdum commodo accumsan volutpat torquent. Fermentum pulvinar sodales nisi eros adipiscing. Fringilla senectus ornare nascetur adipiscing libero, integer pulvinar volutpat. Molestie aenean interdum elit potenti, suscipit ridiculus.",
     "featured": false,
-    "image": "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "price": 400,
+    "image": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "price": 1390,
     "clerkId": "clerkId"
   }
 ]
