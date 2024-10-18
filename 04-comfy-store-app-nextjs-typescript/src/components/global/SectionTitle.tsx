@@ -1,6 +1,10 @@
 import { Separator } from "@/components/ui/separator";
 
-export default function SectionTitle({ text }: { text: string }) {
+type TypeProps = {
+  text: string;
+};
+
+export default function SectionTitle({ text }: TypeProps) {
   return (
     <>
       <h2 className="text-3xl font-medium tracking-wider capitalize mb-8">
