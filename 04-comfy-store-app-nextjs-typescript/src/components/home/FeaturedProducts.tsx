@@ -1,17 +1,14 @@
-import { fetchFeaturedProducts } from "@/utilities/action";
-import { EmptyList, SectionTitle } from "../global";
-import { ProductsGrid } from "../products";
+import { LoadingProductContainer, SectionTitle } from "../global";
+import { Suspense } from "react";
+import FeaturedProductsLoader from "./FeaturedProductsLoader";
 
 export default async function FeaturedProducts() {
-  const products = await fetchFeaturedProducts();
-
-  if (products.length === 0) {
-    return <EmptyList />;
-  }
   return (
     <section>
       <SectionTitle text="featured products" />
-      <ProductsGrid products={products} />
+      <Suspense fallback={<LoadingProductContainer />}>
+        <FeaturedProductsLoader />
+      </Suspense>
     </section>
   );
 }
