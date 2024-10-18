@@ -11,7 +11,7 @@ export default async function CartButton() {
       className="flex justify-center items-center relative"
     >
       <Link href="/cart">
-        <GiShoppingCart className="h-8 w-8" />
+        <GiShoppingCart className="h-7 w-7" />
         <span className="absolute -top-3 -right-3 bg-primary text-white rounded-full h-5 w-5 flex justify-center items-center">
           {numItemsInCart}
         </span>
