@@ -6,9 +6,9 @@ type TypeNavLinks = {
   icon: React.ReactNode;
 }[];
 
-const size = 28;
-const color = "#ffa348";
-const strokeWidth = 1.5;
+const size = "36";
+const color = "#F9A826";
+const strokeWidth = 2;
 
 export const navLinks: TypeNavLinks = [
   {

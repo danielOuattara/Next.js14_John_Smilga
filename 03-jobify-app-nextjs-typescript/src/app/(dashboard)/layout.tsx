@@ -4,7 +4,7 @@ import { type PropsWithChildren } from "react";
 export default function DashboardLayout({ children }: PropsWithChildren) {
   return (
     <main className="grid lg:grid-cols-5">
-      <div className=" hidden lg:block lg:col-span-1 lg:min-h-screen">
+      <div className="hidden lg:block lg:col-span-1 lg:min-h-screen">
         <Sidebar />
       </div>
 
