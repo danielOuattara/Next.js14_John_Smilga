@@ -3,7 +3,8 @@ import logo from "./../assets/logo-2.svg";
 import landingImage from "./../assets/main-2.svg";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-export default function Home() {
+
+export default function HomePage() {
   return (
     <main>
       <header className="mx-auto px-10 md:px-20 py-6 border bg-blue-50">
@@ -16,8 +17,9 @@ export default function Home() {
           className=""
         />
         <div>
-          <h1 className="capitalize text-4xl md:text-7xl font-bold">
-            Job <span className="text-primary">randonnée</span> app
+          <h1 className="text-4xl md:text-7xl font-bold">
+            A <span className="capitalize text-primary">randonnée</span> for a
+            Job
           </h1>
           <p className="leading-loose max-w-md mt-4">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
