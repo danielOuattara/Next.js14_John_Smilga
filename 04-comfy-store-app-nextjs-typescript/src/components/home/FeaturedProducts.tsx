@@ -1,4 +1,4 @@
-import { LoadingProductContainer, SectionTitle } from "../global";
+import { LoadingProductsContainer, SectionTitle } from "../global";
 import { Suspense } from "react";
 import FeaturedProductsLoader from "./FeaturedProductsLoader";
 
@@ -6,7 +6,7 @@ export default async function FeaturedProducts() {
   return (
     <section>
       <SectionTitle text="featured products" />
-      <Suspense fallback={<LoadingProductContainer />}>
+      <Suspense fallback={<LoadingProductsContainer />}>
         <FeaturedProductsLoader />
       </Suspense>
     </section>

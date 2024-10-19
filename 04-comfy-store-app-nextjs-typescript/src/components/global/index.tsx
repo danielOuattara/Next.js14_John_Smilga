@@ -5,4 +5,4 @@ export { default as Providers } from "./Providers";
 export { ThemeProvider } from "./ThemeProvider";
 export { default as SectionTitle } from "./SectionTitle";
 export { default as LoadingProduct } from "./LoadingProduct";
-export { default as LoadingProductContainer } from "./LoadingProductsContainer";
+export { default as LoadingProductsContainer } from "./LoadingProductsContainer";
