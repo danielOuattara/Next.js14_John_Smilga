@@ -11,7 +11,7 @@ export const navLinks: TypeNavLinks = [
     icon: (
       <SquareLibrary
         size={size}
-        className="text-primary"
+        // className="text-primary"
         // strokeWidth={strokeWidth}
       />
     ),
@@ -23,7 +23,7 @@ export const navLinks: TypeNavLinks = [
       <ChartColumnIncreasing
         size={size}
         // color={color}
-        className="text-primary"
+        // className="text-primary"
         // strokeWidth={strokeWidth}
       />
     ),
@@ -34,7 +34,7 @@ export const navLinks: TypeNavLinks = [
     icon: (
       <CopyPlus
         size={size}
-        className="text-primary"
+        // className="text-primary"
         // color={color}
         // strokeWidth={strokeWidth}
       />
