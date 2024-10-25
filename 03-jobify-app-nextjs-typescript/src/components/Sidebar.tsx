@@ -19,9 +19,12 @@ export default function Sidebar() {
             key={link.href}
             variant={pathname === link.href ? "default" : "link"}
           >
-            <Link href={link.href} className="flex justify-end gap-x-2">
+            <Link
+              href={link.href}
+              className="flex justify-end gap-x-2 text-base"
+            >
               {link.icon}
-              <span className="capitalize">{link.label}</span>
+              <span className="capitalize text-primary">{link.label}</span>
             </Link>
           </Button>
         ))}
