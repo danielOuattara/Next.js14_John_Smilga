@@ -17,7 +17,7 @@ export default function HomePage() {
           className=""
         />
         <div>
-          <h1 className="text-4xl md:text-7xl font-bold">
+          <h1 className="text-4xl md:text-6xl font-bold">
             A <span className="capitalize text-primary">randonnée</span> for a
             Job
           </h1>
@@ -30,8 +30,8 @@ export default function HomePage() {
             dolorem accusantium corrupti? Quas, nihil.
           </p>
           <Button asChild>
-            <Link href={"/add-job"} className="m-8">
-              Add a new job
+            <Link href={"/jobs"} className="m-8">
+              Let&apos;s go
             </Link>
           </Button>
         </div>
