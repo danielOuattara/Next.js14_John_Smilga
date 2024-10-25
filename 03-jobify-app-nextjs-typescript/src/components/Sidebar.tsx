@@ -24,7 +24,7 @@ export default function Sidebar() {
               className="flex justify-end gap-x-2 text-base"
             >
               {link.icon}
-              <span className="capitalize text-primary">{link.label}</span>
+              <span className="capitalize">{link.label}</span>
             </Link>
           </Button>
         ))}
