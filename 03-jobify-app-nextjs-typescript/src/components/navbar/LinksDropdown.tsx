@@ -7,9 +7,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import { Button } from "./ui/button";
 import { navLinks } from "@/utilities/navLinks";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 export default function LinksDropdown() {
   return (

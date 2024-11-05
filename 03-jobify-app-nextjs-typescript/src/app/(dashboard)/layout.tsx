@@ -1,4 +1,4 @@
-import { Navbar, Sidebar } from "@/components";
+import { Navbar, Sidebar } from "@/components/navbar";
 import { type PropsWithChildren } from "react";
 
 export default function DashboardLayout({ children }: PropsWithChildren) {

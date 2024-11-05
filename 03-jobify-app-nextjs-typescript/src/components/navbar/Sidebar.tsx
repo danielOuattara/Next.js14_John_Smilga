@@ -1,11 +1,11 @@
 "use client";
 
-import logo from "./../assets/logo-2.svg";
+import logo from "./../../assets/logo-2.svg";
 import { navLinks } from "@/utilities/navLinks";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
+import { Button } from "../ui/button";
 
 export default function Sidebar() {
   const pathname = usePathname();

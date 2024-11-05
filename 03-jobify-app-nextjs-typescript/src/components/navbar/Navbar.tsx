@@ -1,8 +1,7 @@
-import LinksDropdown from "./LinksDropdown";
 import { UserButton } from "@clerk/nextjs";
-import { ThemeToggle } from "./index";
+import { LinksDropdown, ThemeToggle } from "./index";
 import Image from "next/image";
-import logo from "./../assets/logo-2.svg";
+import logo from "./../../assets/logo-2.svg";
 
 export default function Navbar() {
   return (
