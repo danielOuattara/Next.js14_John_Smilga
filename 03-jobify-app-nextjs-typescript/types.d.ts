@@ -4,7 +4,7 @@ type TypeNavLinks = {
   icon: React.ReactNode;
 }[];
 
-type JobType = {
+type TypeJob = {
   id: string;
   createdAt: Date;
   updatedAt: Date;
