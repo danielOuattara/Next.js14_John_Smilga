@@ -20,6 +20,13 @@ npx create-next-app@14 projectName
    npm install prisma@^5.7.0 -D
 ```
 
+Same as above but installing last version for each package.
+
+```sh
+   npm install @clerk/nextjs @prisma/client @tanstack/react-query @tanstack/react-query-devtools dayjs next-themes recharts
+   npm install -D prisma
+```
+
 ## shadcn/ui
 
 [Docs](https://ui.shadcn.com/)
