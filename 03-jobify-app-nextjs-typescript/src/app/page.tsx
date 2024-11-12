@@ -8,7 +8,9 @@ export default function HomePage() {
   return (
     <main>
       <header className="mx-auto px-10 md:px-20 py-6 border bg-blue-50">
-        <Image src={logo} alt="logo image" className="w-16 h-16" />
+        <Link href={"/"}>
+          <Image src={logo} alt="logo image" className="w-16 h-16" />
+        </Link>
       </header>
       <section className="max-w-6xl mx-auto px-4 sm:px-8 h-screen -mt-20 grid lg:grid-cols-[1fr,400px] items-center">
         <Image

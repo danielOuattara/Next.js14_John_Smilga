@@ -11,7 +11,9 @@ export default function Sidebar() {
   const pathname = usePathname();
   return (
     <aside className="py-4 px-4 bg-muted h-full">
-      <Image src={logo} alt="logo image" className="w-16 h-16 mx-auto" />
+      <Link href={"/"}>
+        <Image src={logo} alt="logo image" className="w-16 h-16 mx-auto" />
+      </Link>
       <div className="flex flex-col mt-20 gap-y-4">
         {navLinks.map((link) => (
           <Button
