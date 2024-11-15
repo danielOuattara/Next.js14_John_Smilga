@@ -30,7 +30,7 @@ export enum EnumJobMode {
 export enum EnumJobWorkPlace {
   FullyOnSite = "fully on-site",
   FullRemote = "full remote",
-  HybridRemote = "hybrid remote ",
+  HybridRemote = "hybrid",
 }
 
 export const formSchemaCreateAndEditJob = z.object({
@@ -76,17 +76,17 @@ type TypeSingleFormSelect = {
 export const customFormSelectList: TypeSingleFormSelect[] = [
   {
     name: "mode",
-    labelText: "Job Mode",
+    labelText: "Mode",
     items: Object.values(EnumJobMode),
   },
   {
-    name: "status",
-    labelText: "Job Status",
-    items: Object.values(EnumJobStatus),
+    name: "workplace",
+    labelText: "Workplace",
+    items: Object.values(EnumJobWorkPlace),
   },
   {
-    name: "workplace",
-    labelText: "Job Workplace",
-    items: Object.values(EnumJobWorkPlace),
+    name: "status",
+    labelText: "Status",
+    items: Object.values(EnumJobStatus),
   },
 ];
