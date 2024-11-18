@@ -13,10 +13,18 @@ import {
   formSchemaCreateAndEditJob,
   InferTypeCreateAndEditJob,
 } from "./jobFormUtils";
-import CustomFormInput from "./CustomFormInput";
-import CustomFormSelect from "./CustomFormSelect";
+import { CustomFormInput, CustomFormSelect } from "./index";
+
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useRouter } from "next/navigation";
+import { useToast } from "@/hooks/use-toast";
+import { createJobAction } from "@/actions";
 
 export default function CreateJobForm() {
+  const queryClient = useQueryClient();
+  const { toast } = useToast();
+  const router = useRouter();
+
   const form = useForm<InferTypeCreateAndEditJob>({
     resolver: zodResolver(formSchemaCreateAndEditJob),
     defaultValues: {
@@ -30,10 +38,26 @@ export default function CreateJobForm() {
     },
   });
 
+  const { mutate, isPending } = useMutation({
+    mutationFn: (values: InferTypeCreateAndEditJob) => createJobAction(values),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["jobs"] });
+      queryClient.invalidateQueries({ queryKey: ["stats"] });
+      queryClient.invalidateQueries({ queryKey: ["charts"] });
+      toast({ description: "job created" });
+      router.push("/jobs");
+      // form.reset();
+    },
+    onError: (error: Error) => {
+      toast({ description: error.message });
+    },
+  });
+
   function onSubmit(values: InferTypeCreateAndEditJob) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
+    mutate(values);
   }
 
   return (
@@ -47,7 +71,6 @@ export default function CreateJobForm() {
           {customFormInputList.map((item) => (
             <CustomFormInput key={item} name={item} control={form.control} />
           ))}
-
           {customFormSelectList.map((item) => (
             <CustomFormSelect
               key={item.name}
@@ -57,10 +80,12 @@ export default function CreateJobForm() {
               items={Object.values(item.items)}
             />
           ))}
-
-          {/* <br /> */}
-          <Button type="submit" className="self-end capitalize">
-            Submit
+          <Button
+            type="submit"
+            className="self-end capitalize"
+            disabled={isPending}
+          >
+            {isPending ? "Loading..." : "Add Job"}
           </Button>
         </div>
       </form>
