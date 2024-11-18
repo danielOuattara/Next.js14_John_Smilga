@@ -1,28 +1,14 @@
 "use server";
 
+import { authenticateOrRedirect } from "./index";
 import prisma from "../../prisma/db";
-import { auth } from "@clerk/nextjs/server";
+
 import {
   TypeJob,
   formSchemaCreateAndEditJob,
   InferTypeCreateAndEditJob,
 } from "@/components/forms/jobFormUtils";
 // import { redirect } from "next/navigation";
-
-//----------
-
-async function authenticateOrRedirect() {
-  const myAuth = await auth();
-  console.log(myAuth);
-  const { userId, redirectToSignIn } = await auth();
-  if (!userId) {
-    return redirectToSignIn();
-    // redirect('/')
-  }
-  return userId;
-}
-
-//----------
 
 export default async function createJobAction(
   values: InferTypeCreateAndEditJob,
