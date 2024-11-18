@@ -1,13 +1,13 @@
 "use server";
 
-import { authenticateOrRedirect } from "./index";
-import prisma from "../../prisma/db";
-
 import {
   TypeJob,
-  formSchemaCreateAndEditJob,
   InferTypeCreateAndEditJob,
-} from "@/components/forms/jobFormUtils";
+  formSchemaCreateAndEditJob,
+} from "@/components/jobs/jobFormUtils";
+import prisma from "../../prisma/db";
+import { authenticateOrRedirect } from "./index";
+
 // import { redirect } from "next/navigation";
 
 export default async function createJobAction(
