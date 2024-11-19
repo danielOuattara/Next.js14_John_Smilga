@@ -12,7 +12,7 @@ import {
   EnumJobWorkPlace,
   formSchemaCreateAndEditJob,
   InferTypeCreateAndEditJob,
-} from "./jobFormUtils";
+} from "./utils/jobFormUtils";
 import { CustomFormInput, CustomFormSelect } from "./index";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";

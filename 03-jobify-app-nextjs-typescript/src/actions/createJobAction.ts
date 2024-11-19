@@ -4,7 +4,7 @@ import {
   TypeJob,
   InferTypeCreateAndEditJob,
   formSchemaCreateAndEditJob,
-} from "@/components/jobs/jobFormUtils";
+} from "@/components/jobs/utils/jobFormUtils";
 import prisma from "../../prisma/db";
 import { authenticateOrRedirect } from "./index";
 
