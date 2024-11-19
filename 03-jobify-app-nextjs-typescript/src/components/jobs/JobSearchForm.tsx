@@ -14,17 +14,24 @@ import { EnumJobStatus } from "./utils/jobFormUtils";
 import { FormEvent } from "react";
 
 export default function SearchForm() {
-  // usePathname;
-  // useRouter;
-  // useSearchParams;
+  const searchParams = useSearchParams();
+  const search = searchParams.get("search") || "";
+  const jobStatus = searchParams.get("jobStatus") || "all";
+
+  const router = useRouter();
+  const pathname = usePathname();
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(e);
     const formData = new FormData(e.currentTarget);
     const search = formData.get("search") as string;
     const jobStatus = formData.get("jobStatus") as string;
-    console.log(search, jobStatus);
+
+    const params = new URLSearchParams();
+    params.set("search", search);
+    params.set("jobStatus", jobStatus);
+
+    router.push(`${pathname}?${params.toString()}`);
   };
 
   return (
@@ -32,12 +39,20 @@ export default function SearchForm() {
       className="bg-muted mb-16 p-8 grid sm:grid-cols-2 md:grid-cols-3 gap-4 rounded-lg"
       onSubmit={handleSubmit}
     >
-      <Input type="text" placeholder="SearchJobs" name="search" />
-      <Select name="jobStatus">
+      <Input
+        type="text"
+        placeholder="SearchJobs"
+        name="search"
+        defaultValue={search}
+      />
+      <Select name="jobStatus" defaultValue={jobStatus}>
         <SelectTrigger>
-          <SelectValue />
+          <SelectValue /* placeholder="Select a status" */ />
         </SelectTrigger>
         <SelectContent>
+          <SelectItem value="all" defaultValue={"all"}>
+            all
+          </SelectItem>
           {[
             "all",
             ...Object.values(EnumJobStatus).map((jobStatus) => (
