@@ -1,4 +1,4 @@
-import { TypeJob } from "@/components/forms/jobFormUtils";
+import { TypeJob } from "@/components/jobs/utils/jobFormUtils";
 import { authenticateOrRedirect } from "./index";
 import prisma from "./../../prisma/db";
 import { Prisma } from "@prisma/client";
