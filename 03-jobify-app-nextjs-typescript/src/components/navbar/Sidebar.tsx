@@ -21,7 +21,7 @@ export default function Sidebar() {
             key={link.href}
             variant={pathname === link.href ? "default" : "link"}
           >
-            <Link href={link.href} className="gap-x-4 ">
+            <Link href={link.href} className="gap-x-4">
               {link.icon}
               <span className="capitalize">{link.label}</span>
             </Link>

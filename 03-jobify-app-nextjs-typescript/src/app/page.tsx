@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <main>
-      <header className="mx-auto px-10 md:px-20 py-6 border bg-blue-50">
+      <header className="mx-auto px-10 md:px-20 py-6 border bg-muted">
         <Link href={"/"}>
           <Image src={logo} alt="logo image" className="w-16 h-16" />
         </Link>
