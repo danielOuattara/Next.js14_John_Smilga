@@ -11,6 +11,7 @@ export type TypeJob = {
   status: string;
   //   country: string;
   mode: string;
+  workplace: string;
 };
 
 export enum EnumJobStatus {
