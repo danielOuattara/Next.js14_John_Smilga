@@ -40,7 +40,7 @@ export default function CustomFormSelect<T extends FieldValues>({
           <FormDescription>
             Select a {name} in the select menu below
           </FormDescription>
-          <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <Select onValueChange={field.onChange} value={field.value}>
             <FormControl>
               <SelectTrigger>
                 <SelectValue placeholder={name} />
